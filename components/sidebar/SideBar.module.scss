@@ -4,6 +4,45 @@
   max-width: 360px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 20px 16px;
+  gap: 60px;
+  background-color: #1197f1;
+  .sidebar__top {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    .sidebar__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .sidebar_name {
+      margin: 0;
+      padding: 0%;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .sidebar_title {
+      margin: 0;
+      padding: 0%;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .sidebar__middle__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar__bottom__icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }

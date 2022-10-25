@@ -13,12 +13,12 @@ export default function SideBar() {
         <Image
           src={sumit}
           alt="profile"
-          width={100}
-          height={100}
+          width={180}
+          height={180}
           className={style.sidebar__image}
         />
-        <p>Sumit Kumar Singh</p>
-        <p>FrontEnd Developer</p>
+        <p className={style.sidebar_name}>Sumit Kumar Singh</p>
+        <p className={style.sidebar_title}>FrontEnd Developer</p>
       </div>
       <div className={style.sidebar__middle}>
         <div className={style.sidebar__middle__item}>

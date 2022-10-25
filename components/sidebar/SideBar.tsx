@@ -22,23 +22,37 @@ export default function SideBar() {
       </div>
       <div className={style.sidebar__middle}>
         <div className={style.sidebar__middle__item}>
-          <p>Experience</p>
-          <p>Projects</p>
-          <p>Skills</p>
-          <p>Education</p>
-          <p>Contact me</p>
-          <p>CV</p>
+          <p className={style.sidebar_link}>About me</p>
+          <p className={style.sidebar_link}>Experience</p>
+          <p className={style.sidebar_link}>Projects</p>
+          <p className={style.sidebar_link}>Skills</p>
+          <p className={style.sidebar_link}>Education</p>
+          <p className={style.sidebar_link}>Contact me</p>
+          <p className={style.sidebar_link}>CV</p>
         </div>
       </div>
       <div className={style.sidebar__bottom}>
         <div className={style.sidebar__bottom__icons}>
-          <Image src={linkedin} alt="linkedin" width={30} height={30} />
-          <Image src={github} alt="github" width={30} height={30} />
+          <Image
+            src={linkedin}
+            alt="linkedin"
+            width={30}
+            height={30}
+            className={style.sidebar_icon}
+          />
+          <Image
+            src={github}
+            alt="github"
+            width={30}
+            height={30}
+            className={style.sidebar_icon}
+          />
           <Image
             src={stackoverflow}
             alt="stackoverflow"
             width={30}
             height={30}
+            className={style.sidebar_icon}
           />
         </div>
       </div>

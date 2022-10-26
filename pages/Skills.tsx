@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import SkillsPage from "../components/skills/SkillsPage";
 
 export default function Skills() {
-  return (
-    <div>Skills</div>
-  )
+  return <SkillsPage />;
 }

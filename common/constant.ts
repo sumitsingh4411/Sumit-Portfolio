@@ -22,10 +22,6 @@ export const SIDEBAR_LINKS = [
     path: URLPaths.SKILLS,
   },
   {
-    name: "Education",
-    path: URLPaths.EDUCATION,
-  },
-  {
     name: "Projects",
     path: URLPaths.PROJECTS,
   },

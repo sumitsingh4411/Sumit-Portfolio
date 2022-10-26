@@ -38,3 +38,60 @@ export const SIDEBAR_LINKS = [
     path: URLPaths.CONTACT,
   },
 ];
+
+export const SKILLS = [
+  {
+    name: "HTML",
+    level: 90,
+  },
+  {
+    name: "CSS",
+    level: 90,
+  },
+  {
+    name: "JavaScript",
+    level: 80,
+  },
+  {
+    name: "React",
+    level: 80,
+  },
+  {
+    name: "TypeScript",
+    level: 70,
+  },
+  {
+    name: "Redux",
+    level: 70,
+  },
+  {
+    name: "Next.js",
+    level: 70,
+  },
+];
+
+export const SKILLS_LIST: string[] = [
+  "React",
+  "GraphQL",
+  "TypeScript",
+  "Prisma",
+  "Apollo",
+  "NodeJS",
+  "Express",
+  "JWT",
+  "Figma",
+  "Git",
+  "Netlify",
+  "Heroku",
+  "Angular",
+  "SSR",
+  "_Lodash",
+  "Python",
+  "Redux",
+  "REST",
+  "Cloudinary",
+  "Firebase",
+  "SCSS",
+  "TDD",
+  "Ionic",
+];

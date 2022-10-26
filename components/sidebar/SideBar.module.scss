@@ -37,12 +37,46 @@
   .sidebar__middle__item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    .sidebar_link {
+      width: 180px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      text-decoration: none;
+      color: rgb(230, 29, 29);
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(224, 135, 224);
+        color: #1197f1;
+        font-weight: 700;
+      }
+    }
+    .siderbar_link_active {
+      background-color: aliceblue;
+      color: #1197f1;
+      font-weight: 700;
+    }
   }
   .sidebar__bottom__icons {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    .sidebar_icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      cursor: pointer;
+      &:hover {
+        border-radius: 4px;
+        background: #fff;
+      }
+    }
   }
 }

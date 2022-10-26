@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import ExperiencePage from "../components/experience/ExperiencePage";
 
 export default function Experience() {
-  return (
-    <div>Experience</div>
-  )
+  return <ExperiencePage />;
 }

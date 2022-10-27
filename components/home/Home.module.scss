@@ -3,6 +3,11 @@
   width: 100%;
   background-color: rgba(5, 3, 3, 0.5); /* Black background with opacity */
   z-index: 2;
+  background: url("../../assets/about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   .home__container {
     padding: 32px;
     display: flex;
@@ -10,9 +15,16 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    gap: 16px;
     p {
       font-size: 24px;
-      color: rgb(229, 208, 16);
+      color: rgb(233, 232, 219);
+    }
+    .left_container {
+      flex: 1;
+    }
+    .home__container__social {
+      flex: 1;
     }
   }
 }

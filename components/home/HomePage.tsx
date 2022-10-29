@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import style from "./Home.module.scss";
-import about from "../../assets/about.jpg";
+import home from "../../assets/home.svg";
 
 export default function Home() {
   return (
@@ -28,6 +28,7 @@ export default function Home() {
             work independently.
           </span>
         </p>
+        <Image src={home} alt="home" className={style.home__image} />
       </div>
     </div>
   );

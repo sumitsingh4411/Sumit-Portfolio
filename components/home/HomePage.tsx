@@ -8,10 +8,12 @@ export default function Home() {
     <div className={style.home}>
       <div className={style.home__container}>
         <p className={style.left_container}>
-          <span className={style.home__container__name}>Sumit Singh</span>
+          <span className={style.home__container__name}>
+            <span className={style.home_first_letter}>S</span>umit Singh
+          </span>
           <br />
           <span className={style.home__container__title}>
-            Full Stack Developer
+            FrontEnd Developer
           </span>
           <br />
           <span className={style.home__container__description}>
@@ -28,7 +30,9 @@ export default function Home() {
             work independently.
           </span>
         </p>
-        <Image src={home} alt="home" className={style.home__image} />
+        <div className={style.home__container__social}>
+          <Image src={home} alt="home" objectFit="cover" />
+        </div>
       </div>
     </div>
   );

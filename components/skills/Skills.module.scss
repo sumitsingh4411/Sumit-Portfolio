@@ -29,8 +29,16 @@
   border-radius: 4px;
   .progress_bar_value {
     height: 100%;
-    background-color: #3f51b5;
+    background-color: rgb(224, 135, 224);
     border-radius: 4px;
-    transition: linear 0.5s width;
+    animation: fillbackground 1s linear;
+  }
+  @keyframes fillbackground {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
   }
 }

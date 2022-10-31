@@ -33,3 +33,8 @@ h6 {
     background: black;
   }
 }
+
+:root {
+  --primary: #adefd1ff;
+  --secondary: #00203fff;
+}

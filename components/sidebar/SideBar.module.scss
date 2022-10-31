@@ -7,8 +7,8 @@
   justify-content: flex-start;
   padding: 20px 16px;
   gap: 60px;
-  background-color: #ba68c8;
-  color: #455a64;
+  background-color: var(--secondary);
+  color: var(--primary);
   .sidebar__top {
     margin-top: 40px;
     display: flex;
@@ -21,7 +21,9 @@
       height: 100%;
       object-fit: contain;
       border-radius: 50%;
+      animation: imageAnimation 1s linear infinite;
     }
+ 
     .sidebar_name {
       margin: 0;
       padding: 0%;
@@ -48,7 +50,7 @@
       justify-content: center;
       border-radius: 4px;
       text-decoration: none;
-      color: #455a64;
+      color: var(--primary);
       font-size: 18px;
       font-weight: 600;
       cursor: pointer;

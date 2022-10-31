@@ -49,6 +49,7 @@ export default function ContactPage() {
   return (
     <div className={style.contact}>
       <h1 className={style.heading_contact}>Contact with me</h1>
+      <div className={style.contack_below_style}></div>
       <form onSubmit={formik.handleSubmit} className={style.form_list}>
         <div className={style.formGroup}>
           <label htmlFor="name">Name</label>

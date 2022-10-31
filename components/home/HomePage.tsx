@@ -30,9 +30,6 @@ export default function Home() {
             work independently.
           </span>
         </p>
-        <div className={style.home__container__social}>
-          <Image src={home} alt="home" objectFit="cover" />
-        </div>
       </div>
     </div>
   );

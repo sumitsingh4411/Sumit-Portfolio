@@ -16,24 +16,18 @@ export default function ProjectPage() {
               <Image
                 src={image}
                 key={index}
-                width={320}
-                height={320}
+                width={300}
+                height={220}
                 alt={index + "image"}
               />
             ))}
           </Carousel>
+          <div className={style.project_page__container_bottom}>
+            <span className={style.custom_btn}>View More</span>
+            <span className={style.custom_btn}>View Live</span>
+          </div>
         </div>
       ))}
-      <div className={style.project_page__container_bottom}>
-        <button className={style.project_page__container_bottom__button}>
-          <Image src={github} width={20} height={20} alt="github" />
-          <span>View More</span>
-        </button>
-        <button className={style.project_page__container_bottom__button}>
-          <Image src={github} width={20} height={20} alt="github" />
-          <span>View Live</span>
-        </button>
-      </div>
     </div>
   );
 }

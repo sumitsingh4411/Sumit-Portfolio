@@ -8,28 +8,34 @@ export default function Home() {
     <div className={style.home}>
       <div className={style.home__container}>
         <p className={style.left_container}>
+          <span className={style.custom_html}>{"<html>"}</span>
+          <span className={style.custom_html}>&ensp;&ensp;{"<body>"}</span>
+          <span className={style.custom_html}>
+            &ensp;&ensp;&ensp;&ensp;{"<h1>"}
+          </span>
           <span className={style.home__container__name}>
-            <span className={style.home_first_letter}>S</span>umit Singh
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sumit Singh <br />
+          </span>
+          <span className={style.custom_html}>
+            &ensp;&ensp;&ensp;&ensp;{"</h1>"}
           </span>
           <br />
+          <span className={style.custom_html}>
+            &ensp;&ensp;&ensp;&ensp;{"<p>"}
+          </span>
           <span className={style.home__container__title}>
-            FrontEnd Developer
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;FrontEnd Developer
+          </span>
+          <span className={style.custom_html}>
+            &ensp;&ensp;&ensp;&ensp;{"</p>"}
           </span>
           <br />
-          <span className={style.home__container__description}>
-            I am a Full Stack Developer with 2 years of experience in building
-            web applications. I have worked on various projects using React,
-            Next.js, Node.js, Express.js, MongoDB, MySQL, and Firebase. I am
-            also familiar with various other technologies like Redux, GraphQL,
-            Apollo, and Socket.io. I am a quick learner and always eager to
-            learn new technologies. I am also a team player and have worked in
-            teams of 2 to 5 members. I am also a self-motivated person and can
-            work independently. I am also a quick learner and always eager to
-            learn new technologies. I am also a team player and have worked in
-            teams of 2 to 5 members. I am also a self-motivated person and can
-            work independently.
-          </span>
+          <span className={style.custom_html}>&ensp;&ensp;{"</body>"}</span>
+          <span className={style.custom_html}>{"</html>"}</span>
         </p>
+        <div className={style.right_container}>
+          <Image src={home} alt="home" objectFit="contain" />
+        </div>
       </div>
     </div>
   );

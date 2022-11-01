@@ -14,20 +14,11 @@ export default function Home() {
             &ensp;&ensp;&ensp;&ensp;{"<h1>"}
           </span>
           <span className={style.home__container__name}>
-            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sumit Singh <br />
-          </span>
-          <span className={style.custom_html}>
-            &ensp;&ensp;&ensp;&ensp;{"</h1>"}
-          </span>
-          <br />
-          <span className={style.custom_html}>
-            &ensp;&ensp;&ensp;&ensp;{"<p>"}
-          </span>
-          <span className={style.home__container__title}>
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sumit Singh, <br />
             &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;FrontEnd Developer
           </span>
           <span className={style.custom_html}>
-            &ensp;&ensp;&ensp;&ensp;{"</p>"}
+            &ensp;&ensp;&ensp;&ensp;{"</h1>"}
           </span>
           <br />
           <span className={style.custom_html}>&ensp;&ensp;{"</body>"}</span>

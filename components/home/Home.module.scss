@@ -25,11 +25,13 @@
 .custom_html {
   display: block;
   font-family: "Cedarville Cursive", cursive;
-  font-size: 16px;
-  margin-bottom: 32px;
-  margin-top: 32px;
+  font-size: 20px;
+  margin-bottom: 72px;
+  margin-top: 72px;
+  color: var(--secondary);
+  font-weight: 600;
 }
 .home__container__name {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
 }

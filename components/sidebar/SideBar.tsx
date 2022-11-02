@@ -48,6 +48,7 @@ export default function SideBar() {
             width={30}
             height={30}
             className={style.sidebar_icon}
+            onClick={() => window.open(URLPaths.LINKEDIN)}
           />
           <Image
             src={github}
@@ -55,6 +56,7 @@ export default function SideBar() {
             width={30}
             height={30}
             className={style.sidebar_icon}
+            onClick={() => window.open(URLPaths.GITHUB)}
           />
           <Image
             src={stackoverflow}
@@ -62,6 +64,7 @@ export default function SideBar() {
             width={30}
             height={30}
             className={style.sidebar_icon}
+            onClick={() => window.open(URLPaths.STACKOVERFLOW)}
           />
         </div>
       </div>

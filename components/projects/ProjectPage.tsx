@@ -23,8 +23,22 @@ export default function ProjectPage() {
             ))}
           </Carousel>
           <div className={style.project_page__container_bottom}>
-            <span className={style.custom_btn}>View More</span>
-            <span className={style.custom_btn}>View Live</span>
+            <span
+              className={style.custom_btn}
+              onClick={() => {
+                window.open(project?.githubUrl);
+              }}
+            >
+              View More
+            </span>
+            <span
+              className={style.custom_btn}
+              onClick={() => {
+                window.open(project?.githubUrl);
+              }}
+            >
+              View Live
+            </span>
           </div>
         </div>
       ))}

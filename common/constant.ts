@@ -6,6 +6,9 @@ export enum URLPaths {
   SKILLS = "/skills",
   EXPERIENCE = "/experience",
   EDUCATION = "/education",
+  LINKEDIN = "https://www.linkedin.com/in/sumit-singh-81a73817a/",
+  STACKOVERFLOW = "https://stackoverflow.com/users/11687831/sumit-kumar-singh",
+  GITHUB = "https://github.com/sumitsingh4411",
 }
 
 export const SIDEBAR_LINKS = [

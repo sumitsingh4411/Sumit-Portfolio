@@ -14,7 +14,6 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,10 +21,11 @@
     transition: all 0.5s ease;
   }
   .project_page__container_bottom {
+    border-top: 1px solid #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 5px 30px;
+    padding: 10px 30px;
   }
 }

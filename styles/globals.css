@@ -24,25 +24,6 @@ h6 {
   height: 100vh;
   width: 100vw;
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-} */
 
 :root {
   --primary: #adefd1ff;

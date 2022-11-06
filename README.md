@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![Book logo](./Screenshot Capture - 2022-11-06 - 09-24-10.png)
+![Book logo](Screenshot Capture - 2022-11-06 - 09-24-10.png)
 ## Getting Started
 
 First, run the development server:

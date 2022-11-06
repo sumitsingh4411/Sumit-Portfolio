@@ -1,10 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+const withCSS = require("@zeit/next-css");
+
+module.exports = withCSS({
   swcMinify: true,
   images: {
-    domains: ['camo.githubusercontent.com'],
+    domains: ['camo.githubusercontent.com', 'user-images.githubusercontent.com'],
   },
-}
+});
 
-module.exports = nextConfig

@@ -4,7 +4,6 @@ import SideBar from "../components/sidebar/SideBar";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import "@react-pdf-viewer/zoom/lib/styles/index.css";
-import "@uiw/react-markdown-preview/esm/styles/markdown.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

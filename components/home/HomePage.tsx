@@ -1,8 +1,15 @@
+//@ts-nocheck
 import Image from "next/image";
 import React from "react";
 import style from "./Home.module.scss";
 import home from "../../assets/home.svg";
 import dynamic from "next/dynamic";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
+
+SyntaxHighlighter.registerLanguage("typescript", typescript);
 
 export default function Home() {
   const source = `
@@ -37,31 +44,60 @@ const sumit = {
     currentProject: "I am developing Argumented Reality with react native with help of react-viro"
 };
 \`\`\`
-#### Always curious to learn cutting edge technology.  enthusiast towards web development. I like Competitive programming.  <br> <br>
-
-![visitors](https://visitor-badge.glitch.me/badge?page_id=sumitsingh4411.sumitsingh4411) <br>
-
-
-![visitors](https://visitor-badge.glitch.me/badge?page_id=sumitsingh4411.sumitsingh4411)
-
+#### Always curious to learn cutting edge technology.  enthusiast towards web development. I like Competitive programming.  
 
 ---
-
-⭐️ From [@sumitsingh4411](https://github.com/sumitsingh4411)
-
-<!-- TO make screenshot of your code, copy below link:  
-https://carbon.now.sh/ -->
-
 `;
+  const syntaxTheme = atomDark;
 
+  const MarkdownComponents: object = {
+    code({ node, inline, className, ...props }) {
+      const match = /language-(\w+)/.exec(className || "");
+      const hasMeta = node?.data?.meta;
+
+      const applyHighlights: object = (applyHighlights: number) => {
+        if (hasMeta) {
+          const RE = /{([\d,-]+)}/;
+          const metadata = node.data.meta?.replace(/\s/g, "");
+          const strlineNumbers = RE?.test(metadata)
+            ? RE?.exec(metadata)[1]
+            : "0";
+          const highlightLines = rangeParser(strlineNumbers);
+          const highlight = highlightLines;
+          const data: string = highlight.includes(applyHighlights)
+            ? "highlight"
+            : null;
+          return { data };
+        } else {
+          return {};
+        }
+      };
+      return match ? (
+        <SyntaxHighlighter
+          style={syntaxTheme}
+          language={match[1]}
+          PreTag="div"
+          className="codeStyle"
+          showLineNumbers={true}
+          wrapLines={hasMeta ? true : false}
+          useInlineStyles={true}
+          lineProps={applyHighlights}
+          {...props}
+        />
+      ) : (
+        <code className={className} {...props} />
+      );
+    },
+  };
   return (
     <div className={style.home}>
       <div className={style.home__container}>
         <div className={style.left_container}>
-          <div data-color-mode="dark"></div>
-        </div>
-        <div className={style.right_container}>
-          <Image src={home} alt="home" objectFit="contain" />
+          <div data-color-mode="dark">
+            <ReactMarkdown components={MarkdownComponents}>
+              {source}
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </div>

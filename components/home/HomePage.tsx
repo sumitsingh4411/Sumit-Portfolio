@@ -2,11 +2,7 @@ import Image from "next/image";
 import React from "react";
 import style from "./Home.module.scss";
 import home from "../../assets/home.svg";
-import { MarkdownPreviewProps } from "@uiw/react-markdown-preview";
 import dynamic from "next/dynamic";
-import MarkdownPreview from "@uiw/react-markdown-preview";
-
-
 
 export default function Home() {
   const source = `
@@ -62,9 +58,7 @@ https://carbon.now.sh/ -->
     <div className={style.home}>
       <div className={style.home__container}>
         <div className={style.left_container}>
-          <div data-color-mode="dark">
-            <MarkdownPreview source={source} />
-          </div>
+          <div data-color-mode="dark"></div>
         </div>
         <div className={style.right_container}>
           <Image src={home} alt="home" objectFit="contain" />

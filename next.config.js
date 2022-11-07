@@ -1,9 +1,11 @@
-const withCSS = require("@zeit/next-css");
-
-module.exports = withCSS({
+const configure = {
   swcMinify: true,
   images: {
-    domains: ['camo.githubusercontent.com', 'user-images.githubusercontent.com'],
+    domains: [
+      "camo.githubusercontent.com",
+      "user-images.githubusercontent.com",
+    ],
   },
-});
+};
 
+module.exports = configure;

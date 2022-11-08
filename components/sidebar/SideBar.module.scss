@@ -47,24 +47,19 @@
       width: 180px;
       height: 36px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
       text-decoration: none;
       color: var(--primary);
       font-size: 18px;
       font-weight: 600;
       cursor: pointer;
       &:hover {
-        background-color: rgb(224, 135, 224);
-        color: #455a64;
+        color: #fff;
         font-weight: 700;
       }
     }
     .siderbar_link_active {
-      background-color: aliceblue;
-      color: #455a64;
-      font-weight: 700;
+      color: aliceblue;
+      font-weight: 600;
     }
   }
   .sidebar__bottom__icons {
@@ -85,4 +80,23 @@
       }
     }
   }
+}
+.sidebar__middle__item__icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  .sidebar__middle__item__icon__image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    background: #fff;
+  }
+}
+.sidebar__middle__item__icon__image_container {
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

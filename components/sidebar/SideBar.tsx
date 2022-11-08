@@ -34,7 +34,18 @@ export default function SideBar() {
                   path === item.path ? style.siderbar_link_active : ""
                 }`}
               >
-                {item.name}
+                <div className={style.sidebar__middle__item__icon}>
+                  <div className={style.sidebar__middle__item__icon__image_container}>
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={20}
+                    height={20}
+                    className={style.sidebar__middle__item__icon__image}
+                  />
+                  </div>
+                  <p>{item.name}</p>
+                </div>
               </a>
             </Link>
           ))}

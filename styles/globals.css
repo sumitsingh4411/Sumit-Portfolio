@@ -27,7 +27,7 @@ ol {
 }
 .main_content_body {
   display: flex;
-  height:  100vh;
+  height: calc(100vh - 80px);
 }
 
 :root {

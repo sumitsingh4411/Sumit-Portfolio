@@ -1,10 +1,3 @@
-import aboutIcon from ".././assets/about.svg";
-import experienceIcon from ".././assets/experience.svg";
-import skillsIcon from ".././assets/skills.svg";
-import contactIcon from ".././assets/contact.svg";
-import cvIcon from ".././assets/cv.svg";
-import projectIcon from ".././assets/project.svg";
-
 export enum URLPaths {
   ABOUT = "/",
   CONTACT = "/contact",
@@ -22,32 +15,26 @@ export const SIDEBAR_LINKS = [
   {
     name: "About",
     path: URLPaths.ABOUT,
-    icon: aboutIcon,
   },
   {
     name: "Experience",
     path: URLPaths.EXPERIENCE,
-    icon: experienceIcon,
   },
   {
     name: "Skills",
     path: URLPaths.SKILLS,
-    icon: skillsIcon,
   },
   {
     name: "Projects",
     path: URLPaths.PROJECTS,
-    icon: projectIcon,
   },
   {
     name: "CV",
     path: URLPaths.CV,
-    icon: cvIcon,
   },
   {
     name: "Contact",
     path: URLPaths.CONTACT,
-    icon: contactIcon,
   },
 ];
 

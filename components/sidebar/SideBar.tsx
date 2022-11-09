@@ -8,6 +8,7 @@ import sumit from "../../assets/sumit.jpg";
 import { useRouter } from "next/router";
 import { SIDEBAR_LINKS, URLPaths } from "../../common/constant";
 import Link from "next/link";
+import aboutIcon from "../../assets/about.svg";
 
 export default function SideBar() {
   const router = useRouter();
@@ -34,18 +35,7 @@ export default function SideBar() {
                   path === item.path ? style.siderbar_link_active : ""
                 }`}
               >
-                <div className={style.sidebar__middle__item__icon}>
-                  <div className={style.sidebar__middle__item__icon__image_container}>
-                  <Image
-                    src={item.icon}
-                    alt={item.name}
-                    width={20}
-                    height={20}
-                    className={style.sidebar__middle__item__icon__image}
-                  />
-                  </div>
-                  <p>{item.name}</p>
-                </div>
+                {item.name}
               </a>
             </Link>
           ))}

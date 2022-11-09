@@ -6,7 +6,7 @@ import Sphare from "../../common/component/sphare3d/Sphare";
 
 export default function SkillsPage() {
   return (
-    <div className={style.skills_container}>
+    <div className={style.skills}>
       <div className={style.skills_container}>
         <h1 className={style.skills_title}>Skills</h1>
         <div className={style.skills_content}>

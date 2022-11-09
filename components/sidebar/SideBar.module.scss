@@ -1,96 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Xanh+Mono&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Xanh+Mono&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lobster&display=swap");
+
 .sidebar {
-  width: 30%;
-  min-width: 250px;
-  max-width: 360px;
-  max-height: 100vh;
+  width: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px 16px;
-  gap: 60px;
-  background-color: var(--secondary);
-  color: var(--primary);
-  .sidebar__top {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    .sidebar__image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 50%;
-      animation: imageAnimation 1s linear infinite;
-    }
-
-    .sidebar_name {
-      margin: 0;
-      padding: 0%;
-      font-size: 24px;
-      font-weight: 700;
-      font-family: "Roboto", sans-serif;
-    }
-    .sidebar_title {
-      margin: 0;
-      padding: 0%;
-      font-size: 20px;
-      font-weight: 600;
-      font-family: "Roboto", sans-serif;
-    }
+  background-color: #242b4d;
+  padding: 32px 0px;
+  .sidebar_link {
+    padding: 10px 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
   }
-  .sidebar__middle__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .sidebar_link {
-      width: 180px;
-      height: 36px;
-      display: flex;
-      text-decoration: none;
-      color: var(--primary);
-      font-size: 22px;
-      font-weight: 500;
-      font-family: "Roboto", sans-serif;
-      cursor: pointer;
-      &:hover {
-        color: #fff;
-        font-weight: 700;
-      }
-    }
-    .siderbar_link_active {
-      color: aliceblue;
-      font-weight: 600;
-    }
+  .sidebar_link:hover {
+    background-color: #1a1f3a;
   }
-  .sidebar__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .siderbar_link_active {
+    background-color: #393f5c;
+    color: white;
   }
-  .sidebar__bottom__icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-    width: 180px;
-    .sidebar_icon {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      cursor: pointer;
-      transition: 1s ease-in-out;
-    }
-    .sidebar_icon:hover {
-      transform: scale(1.1);
-    }
-  }
-}
-.sidebar__middle__item__icon {
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }

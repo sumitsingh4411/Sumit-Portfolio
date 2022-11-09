@@ -1,19 +1,16 @@
 .cv_container {
-  padding: 42px;
-  background-color: #f5f5f5;
+  padding: 32px;
+  background-color: #1e2442;
   width: 100%;
+  height: calc(100vh - 74px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
-  .cv_title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
+  overflow-x: hidden;
   .pdf_viewer {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    border-radius: 4px;
   }
 }

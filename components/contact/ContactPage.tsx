@@ -48,7 +48,7 @@ export default function ContactPage() {
   });
   return (
     <div className={style.contact}>
-      <h1 className={style.heading_contact}>Contact with me</h1>
+      <h1 className={style.heading_contact}>Contact with Sumit</h1>
       <div className={style.contack_below_style}></div>
       <form onSubmit={formik.handleSubmit} className={style.form_list}>
         <div className={style.formGroup}>
@@ -60,12 +60,9 @@ export default function ContactPage() {
             onChange={formik.handleChange}
             value={formik.values.name}
           />
-          {
-            // If there is an error, show it
-            formik.touched.name && formik.errors.name ? (
-              <div className={style.error}>{formik.errors.name}</div>
-            ) : null
-          }
+          {formik.touched.name && formik.errors.name ? (
+            <div className={style.error}>{formik.errors.name}</div>
+          ) : null}
         </div>
         <div className={style.formGroup}>
           <label htmlFor="email">Email</label>
@@ -76,12 +73,9 @@ export default function ContactPage() {
             onChange={formik.handleChange}
             value={formik.values.email}
           />
-          {
-            // If there is an error, show it
-            formik.touched.email && formik.errors.email ? (
-              <div className={style.error}>{formik.errors.email}</div>
-            ) : null
-          }
+          {formik.touched.email && formik.errors.email ? (
+            <div className={style.error}>{formik.errors.email}</div>
+          ) : null}
         </div>
         <div className={style.formGroup}>
           <label htmlFor="message">Message</label>
@@ -92,15 +86,12 @@ export default function ContactPage() {
             onChange={formik.handleChange}
             value={formik.values.message}
           />
-          {
-            // If there is an error, show it
-            formik.touched.message && formik.errors.message ? (
-              <div className={style.error}>{formik.errors.message}</div>
-            ) : null
-          }
+          {formik.touched.message && formik.errors.message ? (
+            <div className={style.error}>{formik.errors.message}</div>
+          ) : null}
         </div>
         <button type="submit" className={style.send_message_btn}>
-          Send message
+          {"Send message to Sumit"?.toUpperCase()}
         </button>
       </form>
     </div>

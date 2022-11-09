@@ -18,7 +18,6 @@ export default function CVPage() {
 
   return (
     <div className={style.cv_container}>
-      <h1 className={style.cv_title}>Sumit CV</h1>
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.min.js">
         <div className={style.pdf_viewer}>
           <Viewer

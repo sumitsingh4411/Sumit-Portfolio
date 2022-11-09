@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #242b4d;
+  padding: 0px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  .header__title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Racing Sans One", cursive;
+    color: #fff;
+  }
+  .header__right__item {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    .header__right__item__title {
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-family: "Racing Sans One", cursive;
+      color: #fff;
+    }
+  }
+  .header__right__item__image {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .header__right__item__icon {
+      cursor: pointer;
+    }
+  }
+}

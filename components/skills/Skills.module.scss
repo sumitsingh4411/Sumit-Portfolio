@@ -2,9 +2,9 @@
   padding: 32px;
   background-color: #f5f5f5;
   display: flex;
+  height: calc(100vh - 74px);
   flex-direction: column;
   width: 100%;
-  overflow: scroll;
   .skill {
     margin-bottom: 16px;
     display: flex;

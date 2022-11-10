@@ -48,52 +48,54 @@ export default function ContactPage() {
   });
   return (
     <div className={style.contact}>
-      <h1 className={style.heading_contact}>Contact with Sumit</h1>
-      <div className={style.contack_below_style}></div>
-      <form onSubmit={formik.handleSubmit} className={style.form_list}>
-        <div className={style.formGroup}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-          />
-          {formik.touched.name && formik.errors.name ? (
-            <div className={style.error}>{formik.errors.name}</div>
-          ) : null}
-        </div>
-        <div className={style.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div className={style.error}>{formik.errors.email}</div>
-          ) : null}
-        </div>
-        <div className={style.formGroup}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            rows={5}
-            name="message"
-            onChange={formik.handleChange}
-            value={formik.values.message}
-          />
-          {formik.touched.message && formik.errors.message ? (
-            <div className={style.error}>{formik.errors.message}</div>
-          ) : null}
-        </div>
-        <button type="submit" className={style.send_message_btn}>
-          {"Send message to Sumit"?.toUpperCase()}
-        </button>
-      </form>
+      <div className={style.contact_container}>
+        <h1 className={style.heading_contact}>Contact with Sumit</h1>
+        <div className={style.contack_below_style}></div>
+        <form onSubmit={formik.handleSubmit} className={style.form_list}>
+          <div className={style.formGroup}>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              onChange={formik.handleChange}
+              value={formik.values.name}
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <div className={style.error}>{formik.errors.name}</div>
+            ) : null}
+          </div>
+          <div className={style.formGroup}>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className={style.error}>{formik.errors.email}</div>
+            ) : null}
+          </div>
+          <div className={style.formGroup}>
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              rows={5}
+              name="message"
+              onChange={formik.handleChange}
+              value={formik.values.message}
+            />
+            {formik.touched.message && formik.errors.message ? (
+              <div className={style.error}>{formik.errors.message}</div>
+            ) : null}
+          </div>
+          <button type="submit" className={style.send_message_btn}>
+            {"Send message to Sumit"?.toUpperCase()}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

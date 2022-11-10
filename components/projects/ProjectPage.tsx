@@ -29,7 +29,7 @@ export default function ProjectPage({ data }: any) {
       <div className={style.project_page__header}>
         <h1 className={style.project_main_title}>My Project</h1>
         <div className={style.project_page__header__info}>
-          <p>
+          <p className={style.project_page_sub_title}>
             Projects :{" "}
             <span>{(currentPage !== 1 ? data : projects)?.length}</span>
           </p>
@@ -49,46 +49,43 @@ export default function ProjectPage({ data }: any) {
                 <p className={style.project_name}>
                   Name : <span>{project?.name?.toUpperCase()}</span>
                 </p>
-                <p className={style.project_subtitle}>{project?.description}</p>
-                <p className={style.project_subtitle}>
-                  CREATED AT : {new Date(project?.created_at).toDateString()}
+                <p
+                  className={`${style.project_subtitle} ${style.project_description_two_line_max}`}
+                >
+                  {project?.description}
                 </p>
                 <p className={style.project_subtitle}>
-                  UPDATED AT : {new Date(project?.updated_at).toDateString()}
+                  Created at : {new Date(project?.created_at).toDateString()}
+                </p>
+                <p className={style.project_subtitle}>
+                  Updated at : {new Date(project?.updated_at).toDateString()}
                 </p>
                 <div className={style.stars_count}>
                   <Image src={star} alt="*" width={20} height={20} />
                   <span className={style.project_stars}>
-                    {" : "}
+                    {"  :  "}
                     {project?.stargazers_count}
                   </span>
                 </div>
-                <p className={style.project_subtitle}>
-                  TECHNOLOY USED :{" "}
-                  {project?.topics && (
-                    <ol className={style.project_list_technology}>
-                      {project?.topics?.map((item: any, index: number) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ol>
-                  )}
-                </p>
-              </div>
-              <div className={style.project_page__container__image}>
-                <Carousel autoPlay={true}>
-                  {getProjectUrl(project?.id)?.map(
-                    (image: any, index: number) => (
-                      <Image
-                        src={image}
-                        key={index}
-                        height={230}
-                        width={400}
-                        alt={index + "image"}
-                        className={style.project_page__container__image__img}
-                      />
-                    )
-                  )}
-                </Carousel>
+                {project?.topics && project?.topics.length > 0 && (
+                  <p
+                    className={`${style.project_subtitle} ${style.project_description_technoloy}`}
+                  >
+                    TECHNOLOY USED :{" "}
+                    {
+                      <span className={style.project_list_technology}>
+                        {project?.topics?.map((item: any, index: number) => (
+                          <span
+                            key={index}
+                            className={style.project_single_technoly}
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </span>
+                    }
+                  </p>
+                )}
               </div>
             </div>
             <div className={style.project_page__container_bottom}>
@@ -100,22 +97,16 @@ export default function ProjectPage({ data }: any) {
               >
                 View Details
               </span>
-              <span
-                className={style.custom_btn}
-                onClick={() => {
-                  window.open(project?.homepage);
-                }}
-              >
-                Copy Clone Url
-              </span>
-              <span
-                className={style.custom_btn}
-                onClick={() => {
-                  window.open(project?.homepage);
-                }}
-              >
-                Live Demo
-              </span>
+              {project?.homepage && (
+                <span
+                  className={style.custom_btn}
+                  onClick={() => {
+                    window.open(project?.homepage);
+                  }}
+                >
+                  Live Demo
+                </span>
+              )}
             </div>
           </div>
         ))}

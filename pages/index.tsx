@@ -6,9 +6,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>about sumit</title>
+        <title>Sumit singh</title>
         <meta name="description" content="sumit singh portfolio" />
-        <link rel="icon" href="./../assets/sumit.jpg" />
+        <link rel="icon" href="../sumit.jpg" />
       </Head>
       <HomePage />
     </>

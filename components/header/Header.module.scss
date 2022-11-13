@@ -1,39 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 .header {
-  height: 80px;
   display: flex;
   align-items: center;
+  height: 90px;
   justify-content: space-between;
-  background: #242b4d;
-  padding: 0px 24px;
+  background: var(--primary_background_color);
+  padding: 0px 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  .header__title {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-family: "Racing Sans One", cursive;
-    color: #fff;
+  .header__left__logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid var(--primary_text_color);
+    cursor: pointer;
+    .header_title {
+      font-size: 36px;
+      font-family: "Racing Sans One", cursive;
+      color: var(--primary_text_color);
+      transition: all 2s ease;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
   }
   .header__right__item {
     display: flex;
     align-items: center;
-    gap: 48px;
-    .header__right__item__title {
-      font-size: 22px;
-      font-weight: 500;
-      letter-spacing: 1px;
+    gap: 32px;
+    .header_link {
       font-family: "Racing Sans One", cursive;
-      color: #fff;
-    }
-  }
-  .header__right__item__image {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    .header__right__item__icon {
-      cursor: pointer;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--primary_text_color);
+      text-decoration: none;
+      transition: all 1s ease;
+      &:hover {
+        color: var(--secondary_text_color);
+        text-decoration: underline;
+      }
     }
   }
 }

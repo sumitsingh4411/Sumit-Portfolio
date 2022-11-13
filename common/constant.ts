@@ -15,26 +15,32 @@ export const SIDEBAR_LINKS = [
   {
     name: "About",
     path: URLPaths.ABOUT,
+    url: "#about",
   },
   {
     name: "Experience",
     path: URLPaths.EXPERIENCE,
+    url: "#experience",
   },
   {
     name: "Skills",
     path: URLPaths.SKILLS,
+    url: "#skills",
   },
   {
     name: "Projects",
     path: URLPaths.PROJECTS,
+    url: "#projects",
   },
   {
     name: "CV",
     path: URLPaths.CV,
+    url: "#cv",
   },
   {
     name: "Contact",
     path: URLPaths.CONTACT,
+    url: "#contact",
   },
 ];
 

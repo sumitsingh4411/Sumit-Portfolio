@@ -2,12 +2,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import style from "./Project.module.scss";
 import star from "../../assets/star.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import { getProjectUrl } from "../../common/helpers";
 
 export default function ProjectPage({ data }: any) {
-  const [currentPage, setCurrentPage] = useState(2);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [canUse, setCanUse] = useState(false);
   const [projects, setProjects] = useState([]);
 
   const goToNextPage = async () => {
@@ -20,8 +18,9 @@ export default function ProjectPage({ data }: any) {
         new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
       );
     });
-    setCurrentPage(1);
+    setCurrentPage(currentPage === 1 ? 2 : 1);
     setProjects(data);
+    setCanUse(true);
   };
 
   return (
@@ -30,19 +29,18 @@ export default function ProjectPage({ data }: any) {
         <h1 className={style.project_main_title}>My Project</h1>
         <div className={style.project_page__header__info}>
           <p className={style.project_page_sub_title}>
-            Projects :{" "}
-            <span>{(currentPage !== 1 ? data : projects)?.length}</span>
+            Projects : <span>{(!canUse ? data : projects)?.length}</span>
           </p>
           <button
             className={style.project_page__header__go_to_next_page__btn}
             onClick={goToNextPage}
           >
-            {currentPage !== 1 ? "Go to next page" : "Go to previous page"}
+            {currentPage === 1 ? "Go to next page" : "Go to previous page"}
           </button>
         </div>
       </div>
       <div className={style.project_page__container_main}>
-        {(currentPage !== 1 ? data : projects)?.map((project: any) => (
+        {(!canUse ? data : projects)?.map((project: any) => (
           <div className={style.project_page__container} key={project?.id}>
             <div className={style.project_page__container__top}>
               <div className={style.project_page__container__details}>

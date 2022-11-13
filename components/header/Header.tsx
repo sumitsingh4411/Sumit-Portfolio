@@ -1,30 +1,26 @@
-import Image from "next/image";
 import React from "react";
-import { MULTIMEDIA } from "./constant";
 import style from "./Header.module.scss";
+import { SIDEBAR_LINKS } from "../../common/constant";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <div className={style.header}>
       <div className={style.header__left}>
-        <h1 className={style.header__title}>Sumit Kumar Singh</h1>
+        <div className={style.header__left__logo}>
+          <span className={style.header_title}>S</span>
+        </div>
       </div>
       <div className={style.header__right}>
         <div className={style.header__right__item}>
-          <p className={style.header__right__item__title}>FrontEnd Developer</p>
-          <div className={style.header__right__item__image}>
-            {MULTIMEDIA?.map((item, index) => (
-              <Image
-                src={item?.icon}
-                alt={item?.name}
-                width={24}
-                height={24}
-                className={style.header__right__item__icon}
-                onClick={() => window?.open(item?.url)}
-                key={index}
-              />
-            ))}
-          </div>
+          {SIDEBAR_LINKS.map((item, index) => (
+            <Link href={router?.pathname + item.url} key={index}>
+              <a className={`${style.header_link}`}>{item.name}</a>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

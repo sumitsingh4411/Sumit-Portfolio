@@ -1,0 +1,15 @@
+.primary-btn {
+  background-color: var(--primary_clr);
+  color: var(--primary_text_clr);
+  &:hover {
+    background-color: var(--primary_hover_clr);
+  }
+}
+
+.secondary-btn {
+  background-color: var(--secondary_clr);
+  color: var(--secondary_text_clr);
+  &:hover {
+    background-color: var(--secondary_hover_clr);
+  }
+}

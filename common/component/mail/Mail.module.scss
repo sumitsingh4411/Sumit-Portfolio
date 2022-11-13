@@ -1,0 +1,29 @@
+.mail {
+  position: absolute;
+  bottom: 0%;
+  right: 32px;
+  z-index: 100;
+  .mail__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .mail_sumit {
+    margin-bottom: 100px;
+    transform: rotate(90deg);
+    color: var(--primary_text_color);
+    cursor: pointer;
+    transition: all 1s ease;
+    &:hover {
+      color: var(--secondary_text_color);
+    }
+  }
+  .multimedia__container__straigt_line {
+    width: 2px;
+    height: 120px;
+    background-color: var(--primary_text_color);
+  }
+}

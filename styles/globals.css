@@ -31,6 +31,8 @@ ol {
 }
 
 :root {
-  --primary: #adefd1ff;
-  --secondary: #00203fff;
+  --primary_text_color: #fff;
+  --secondary_text_color: #8892b0;
+  --primary_background_color: #0b2027;
+  --primary-btn-color: #f95959;
 }

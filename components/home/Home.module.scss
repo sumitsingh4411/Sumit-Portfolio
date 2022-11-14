@@ -12,7 +12,6 @@
     flex-direction: column;
     .home__container__content__body {
       max-width: 1100px;
-      margin-bottom: 80px;
       .home_top_title {
         font-size: 20px;
         font-weight: 400;
@@ -88,6 +87,7 @@
 .home__container__about {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   max-width: 1100px;
   gap: 42px;
   .home__container__about__header {
@@ -110,8 +110,36 @@
     display: flex;
     justify-content: center;
     gap: 42px;
-    .home__container__about__body__description {
+    .home__container__about__body_left {
       flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      .home_container_about_description {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--secondary_text_color);
+      }
+      .home_container_about_all_teachnology {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--secondary_text_color);
+        .home_container_about_teachnology {
+          display: flex;
+          gap: 120px;
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            list-style: none;
+            li {
+              font-size: 20px;
+              font-weight: 400;
+              color: var(--secondary_text_color);
+            }
+          }
+        }
+      }
     }
     .home__container__about__body__container {
       flex: 1.5;
@@ -145,5 +173,14 @@
         }
       }
     }
+  }
+}
+
+.link_text_style {
+  color: var(--primary_text_color);
+  text-decoration: none;
+  transition: all 1s ease step-start;
+  &:hover {
+    text-decoration: underline;
   }
 }

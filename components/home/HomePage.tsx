@@ -42,12 +42,55 @@ export default function Home() {
               <div className={style.home__container__about__header__line}></div>
             </div>
             <div className={style.home__container__about__body}>
-              <p className={style.home__container__about__body__description}>
-                I am a frontend developer specializing in React. I have a
-                passion for building web applications and learning new
-                technologies. Currently I am working on technologies like React,
-                Next.js, Typescript, Redux, etc.
-              </p>
+              <div className={style.home__container__about__body_left}>
+                <p className={style.home_container_about_description}>
+                  I am a frontend developer specializing in React. I have a
+                  passion for building web applications and learning new
+                  technologies. I have completed my B.Tech in Computer Science
+                  and Engineering in 2021. In my college days, I have worked on
+                  many{" "}
+                  <a href="" className={style.link_text_style}>
+                    projects
+                  </a>{" "}
+                  and also participated in many hackathons and competative
+                  programming events.
+                </p>
+                <p className={style.home_container_about_description}>
+                  In my last year of college, I joined a startup named{" "}
+                  <a href="" className={style.link_text_style}>
+                    Mapup
+                  </a>{" "}
+                  as a frontend developer intern for 6 months. After that, I
+                  have joined a company named{" "}
+                  <a href="" className={style.link_text_style}>
+                    {" "}
+                    ByteLearn
+                  </a>{" "}
+                  as a frontend developer intern. After 3 months of internship,
+                  I have joined Sparsh Technologies as a full-time frontend
+                  developer.
+                </p>
+                <p className={style.home_container_about_description}>
+                  I have a great problem solving skills and I am always ready to
+                  learn new technologies. I am a quick learner and I am always
+                  ready to learn new things.
+                </p>
+                <div className={style.home_container_about_all_teachnology}>
+                  Here are a few technologies I have been working with recently:
+                  <div className={style.home_container_about_teachnology}>
+                    <ul>
+                      <li>☞ React</li>
+                      <li>☞ Next.js</li>
+                      <li>☞ Typescript</li>
+                      <li>☞ Redux</li>
+                    </ul>
+                    <ul>
+                      <li>☞ JavaScript</li>
+                      <li>☞ Scss</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <div className={style.home__container__about__body__container}>
                 <Image
                   src={sumit}

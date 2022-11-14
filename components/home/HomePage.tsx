@@ -3,6 +3,9 @@ import style from "./Home.module.scss";
 import TopSection from "./sections/topSection/TopSection";
 import AboutSection from "./sections/aboutSection/AboutSection";
 import Experience from "./sections/experienceSection/Experience";
+import SkillSection from "./sections/skillSection/SkillSection";
+import ProjectSection from "./sections/projects/ProjectSection";
+import Contact from "./sections/contact/Contact";
 
 export default function Home() {
   return (
@@ -11,18 +14,9 @@ export default function Home() {
         <TopSection />
         <AboutSection />
         <Experience />
-        <div id="skills" className={style.home__container__container}>
-          hello world
-        </div>
-        <div id="projects" className={style.home__container__container}>
-          hello world
-        </div>
-        <div id="cv" className={style.home__container__container}>
-          hello world
-        </div>
-        <div id="contact" className={style.home__container__container}>
-          hello world
-        </div>
+        <SkillSection />
+        <ProjectSection />
+        <Contact />
       </div>
     </div>
   );

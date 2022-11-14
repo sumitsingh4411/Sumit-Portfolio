@@ -1,0 +1,23 @@
+@import "../../../../common/style/style.module.scss";
+
+.skillSection {
+  @include flex_center(column, 100%, 100%);
+  .skillSection_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1100px;
+    gap: 42px;
+    .skillSection_container__header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .skillSection_container_header__title {
+        @include font_app(36px, 800);
+      }
+      .skillSection_container_header__line {
+        @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
+      }
+    }
+  }
+}

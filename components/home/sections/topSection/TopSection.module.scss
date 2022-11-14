@@ -1,0 +1,39 @@
+@import "../../../../common/style/style.module.scss";
+
+.topSection {
+  @include flex_center(column, 100%, calc(100vh - 90px));
+  .topSection_container {
+    max-width: 1100px;
+    .topSection_top_title {
+      @include font_app(20px);
+    }
+    .topSection_title {
+      @include font_app(60px, 800);
+    }
+    .topSection_subtitle {
+      @include font_app(60px, 800, var(--secondary_text_color));
+      font-family: "Racing Sans One", cursive;
+    }
+    .topSection_description {
+      @include font_app(20px, 400, var(--secondary_text_color));
+      margin-top: 32px;
+      max-width: 600px;
+      font-style: italic;
+    }
+    .topSection_button_github {
+      @include font_app(16px, 400);
+      @include flex_center("row", 232px, 56px);
+      margin-top: 52px;
+      gap: 12px;
+      border-radius: 4px;
+      border: 1px solid var(--primary_text_color);
+      text-decoration: none;
+      transition: all 1s ease;
+      &:hover {
+        opacity: 0.8;
+        border: 1px solid var(--secondary_text_color);
+        background-color: var(--secondary_text_color);
+      }
+    }
+  }
+}

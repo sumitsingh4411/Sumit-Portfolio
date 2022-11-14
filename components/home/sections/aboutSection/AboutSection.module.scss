@@ -1,0 +1,94 @@
+@import "../../../../common/style/style.module.scss";
+
+.aboutSection {
+  @include flex_center(column, 100%, 100%);
+  .aboutSection_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1100px;
+    gap: 42px;
+    .aboutSection_header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .aboutSection_header__title {
+        @include font_app(36px, 800);
+      }
+      .aboutSection_header__line {
+        @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
+      }
+    }
+    .aboutSection_body {
+      display: flex;
+      justify-content: center;
+      gap: 42px;
+      .aboutSection_body_left {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .aboutSection_description {
+          @include font_app(20px, 400, var(--secondary_text_color));
+        }
+        .aboutSection_all_teachnology {
+          @include font_app(20px, 400, var(--secondary_text_color));
+          .aboutSection_teachnology {
+            display: flex;
+            gap: 120px;
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              list-style: none;
+              li {
+                @include font_app(20px, 400, var(--secondary_text_color));
+              }
+            }
+          }
+        }
+      }
+      .aboutSection_body__container {
+        flex: 1.5;
+        position: relative;
+        .aboutSection_body__container__item {
+          border: 2px solid var(--primary_text_color);
+          width: 300px;
+          height: 300px;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          border-radius: 6px;
+        }
+        .aboutSection_body__image {
+          border-radius: 6px;
+          z-index: 2;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .aboutSection_body__image__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 300px;
+          height: 300px;
+          background: transparentize(#8892b0, 0.6);
+          border-radius: 6px;
+          z-index: 2;
+          transition: all 1s ease;
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.link_text_style {
+  color: var(--primary_text_color);
+  text-decoration: none;
+  transition: all 1s ease step-start;
+  &:hover {
+    text-decoration: underline;
+  }
+}

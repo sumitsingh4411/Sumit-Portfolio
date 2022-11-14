@@ -1,0 +1,26 @@
+@mixin flex_center($direction: row, $width: 100%, $height: 100%) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+  width: $width;
+  height: $height;
+}
+
+@mixin font_app($size: 16px, $weight: 400, $color: var(--primary_text_color)) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin draw_line(
+  $width: 100%,
+  $height: 2px,
+  $radius: 4px,
+  $color: var(--secondary_text_color)
+) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: $color;
+}

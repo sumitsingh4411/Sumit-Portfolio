@@ -30,13 +30,35 @@ export default function Experience() {
             ))}
           </div>
           <div className={style.experienceSection_container__body__right}>
-            <h1>
-              {EXPERIENCE_SECTION[active]?.designation}@
-              <span>{EXPERIENCE_SECTION[active]?.company_name}</span>
+            <h1
+              className={style.experienceSection_container__body__right__title}
+            >
+              {EXPERIENCE_SECTION[active]?.designation}
+              <span
+                className={
+                  style.experienceSection_container__body__right__company_name
+                }
+              >
+                {" "}
+                @ {EXPERIENCE_SECTION[active]?.company_name}
+              </span>
             </h1>
-            <h2>{EXPERIENCE_SECTION[active]?.duration}</h2>
+            <h2
+              className={
+                style.experienceSection_container__body__right__duration
+              }
+            >
+              {EXPERIENCE_SECTION[active]?.duration}
+            </h2>
             {EXPERIENCE_SECTION[active]?.description.map((item, index) => (
-              <p key={index}>{item}</p>
+              <p
+                key={index}
+                className={
+                  style.experienceSection_container__body__right__feature
+                }
+              >
+                <span className={style.custom_hand}> ☞</span> {item}
+              </p>
             ))}
           </div>
         </div>

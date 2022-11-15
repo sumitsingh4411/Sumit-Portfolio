@@ -1,0 +1,23 @@
+@import "../../../../common/style/style.module.scss";
+
+.contactSection {
+  @include flex_center(column, 100%, 100%);
+  .contactSection_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    .contactSection_container__header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .contactSection_container__header__title {
+        @include font_app(36px, 800);
+      }
+      .contactSection_container__header__line {
+        @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
+      }
+    }
+  }
+}

@@ -5,13 +5,13 @@ export default function Footer() {
   return (
     <div className={style.footer}>
       <div className={style.footer_container}>
-        <p>
-          Made with{" "}
-          <span role="img" aria-label="heart">
+        <div className={style.foonter_container_text}>
+          <p> Made with</p>
+          <p role="img" aria-label="heart" className={style.heart_blink}>
             ❤️
-          </span>{" "}
-          by Sumit Kumar Singh
-        </p>
+          </p>{" "}
+          <p>by @Sumit Kumar Singh</p>
+        </div>
       </div>
     </div>
   );

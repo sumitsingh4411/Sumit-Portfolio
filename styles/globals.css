@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Racing Sans One";
+  src: url("../assets/font/RacingSansOne-Regular.ttf");
+}
 html,
 body {
   padding: 0;
@@ -36,5 +40,5 @@ ol {
   --primary_background_color: #0b2027;
   --secondary_background_color: rgba(255, 255, 255, 0.2);
   --primary-btn-color: #f95959;
-  --special_color : #07304b;
+  --special_color: #07304b;
 }

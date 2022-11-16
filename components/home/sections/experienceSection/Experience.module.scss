@@ -46,7 +46,6 @@
         .experienceSection_container__body__right__company_name {
           @include font_app(36px, 800, var(--primary_text_color));
           &:hover {
-            text-decoration: underline;
             cursor: pointer;
           }
         }

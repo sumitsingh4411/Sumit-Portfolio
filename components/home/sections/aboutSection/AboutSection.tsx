@@ -18,7 +18,7 @@ export default function AboutSection() {
               for building web applications and learning new technologies. I
               have completed my B.Tech in Computer Science and Engineering in
               2021. In my college days, I have worked on many{" "}
-              <a href="" className={style.link_text_style}>
+              <a href="" className={"hover_underline_animation"}>
                 projects
               </a>{" "}
               and also participated in many hackathons and competative
@@ -26,12 +26,12 @@ export default function AboutSection() {
             </p>
             <p className={style.aboutSection_description}>
               In my last year of college, I joined a startup named{" "}
-              <a href="" className={style.link_text_style}>
+              <a href="" className={"hover_underline_animation"}>
                 Mapup
               </a>{" "}
               as a frontend developer intern for 6 months. After that, I have
               joined a company named{" "}
-              <a href="" className={style.link_text_style}>
+              <a href="" className={"hover_underline_animation"}>
                 {" "}
                 ByteLearn
               </a>{" "}

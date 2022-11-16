@@ -18,7 +18,9 @@ export default function Header() {
         <div className={style.header__right__item}>
           {SIDEBAR_LINKS.map((item, index) => (
             <Link href={router?.pathname + item.url} key={index}>
-              <a className={`${style.header_link}`}>{item.name}</a>
+              <a className={`${style.header_link} hover_underline_animation`}>
+                {item.name}
+              </a>
             </Link>
           ))}
         </div>

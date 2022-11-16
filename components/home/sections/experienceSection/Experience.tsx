@@ -35,12 +35,9 @@ export default function Experience() {
             >
               {EXPERIENCE_SECTION[active]?.designation}
               <span
-                className={
-                  style.experienceSection_container__body__right__company_name
-                }
+                className={`${style.experienceSection_container__body__right__company_name} hover_underline_animation`}
               >
-                {" "}
-                @ {EXPERIENCE_SECTION[active]?.company_name}
+                {"  "} @ {EXPERIENCE_SECTION[active]?.company_name}
               </span>
             </h1>
             <h2

@@ -1,3 +1,5 @@
+// @import url("../../common/style/style.module.scss");
+
 .header {
   display: flex;
   align-items: center;
@@ -35,13 +37,6 @@
       font-family: "Racing Sans One", cursive;
       font-size: 20px;
       font-weight: 500;
-      color: var(--primary_text_color);
-      text-decoration: none;
-      transition: all 1s ease;
-      &:hover {
-        color: var(--secondary_text_color);
-        text-decoration: underline;
-      }
     }
   }
 }

@@ -6,6 +6,7 @@ import Experience from "./sections/experienceSection/Experience";
 import SkillSection from "./sections/skillSection/SkillSection";
 import ProjectSection from "./sections/projects/ProjectSection";
 import Contact from "./sections/contact/Contact";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <SkillSection />
         <ProjectSection />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

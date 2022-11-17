@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import style from "./AboutSection.module.scss";
 import sumit from "../../../../public/sumit.jpg";
+import point_right from "../../../../assets/point_right.svg";
 
 export default function AboutSection() {
   return (
@@ -47,14 +48,27 @@ export default function AboutSection() {
               Here are a few technologies I have been working with recently:
               <div className={style.aboutSection_teachnology}>
                 <ul>
-                  <li>☞ React</li>
-                  <li>☞ Next.js</li>
-                  <li>☞ Typescript</li>
-                  <li>☞ Redux</li>
+                  {["React", "Next.js", "TypeScript", "Redux"].map(
+                    (item, index) => (
+                      <li key={index}>
+                        <Image
+                          src={point_right}
+                          alt="☞"
+                          width={20}
+                          height={20}
+                        />
+                        {item}
+                      </li>
+                    )
+                  )}
                 </ul>
                 <ul>
-                  <li>☞ JavaScript</li>
-                  <li>☞ Scss</li>
+                  {["JavaScript", "HTML", "CSS", "Sass"].map((item, index) => (
+                    <li key={index}>
+                      <Image src={point_right} alt="☞" width={20} height={20} />
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

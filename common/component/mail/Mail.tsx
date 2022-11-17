@@ -5,7 +5,14 @@ export default function Mail() {
   return (
     <div className={style.mail}>
       <div className={style.mail__container}>
-        <p className={style.mail_sumit}>sumitsingh841208@gmail.com</p>
+        <a
+          href="mailto:sumitsingh841208@gmail.com"
+          style={{
+            textDecoration: "none",
+          }}
+        >
+          <p className={style.mail_sumit}>sumitsingh841208@gmail.com</p>
+        </a>
         <div className={style.multimedia__container__straigt_line}></div>
       </div>
     </div>

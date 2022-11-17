@@ -37,12 +37,18 @@
           .aboutSection_teachnology {
             display: flex;
             gap: 120px;
+            margin: 16px 0px;
             ul {
               display: flex;
               flex-direction: column;
               gap: 8px;
               list-style: none;
+              margin: 0;
+              padding: 0;
               li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
                 @include font_app(20px, 400, var(--secondary_text_color));
               }
             }

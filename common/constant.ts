@@ -33,14 +33,14 @@ export const SIDEBAR_LINKS = [
     url: "#projects",
   },
   {
-    name: "CV",
-    path: URLPaths.CV,
-    url: "#cv",
-  },
-  {
     name: "Contact",
     path: URLPaths.CONTACT,
     url: "#contact",
+  },
+  {
+    name: "CV",
+    path: URLPaths.CV,
+    url: "",
   },
 ];
 

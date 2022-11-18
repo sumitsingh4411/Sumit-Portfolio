@@ -121,7 +121,7 @@
   .projectSection_container__footer__title {
     @include font_app(24px, 600);
   }
-  .projectSection_container__footer__list{
+  .projectSection_container__footer__list {
     text-align: center;
     margin-top: 8px;
     cursor: pointer;
@@ -156,17 +156,29 @@
         }
       }
       .projectSection_container__body__project__middle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
         .project_title {
-          @include font_app(24px, 600);
+          @include font_app(19px, 500);
         }
         .project_description {
-          @include font_app(16px, 400);
+          @include font_app(14px, 400);
+          font-style: italic;
         }
       }
       .projectSection_container__body__project__bottom {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex: 1;
+        .project_teachnology_used {
+          display: flex;
+          flex-wrap: wrap;
+          @include font_app(14px, 400, var(--secondary_text_color));
+          gap: 4px;
+        }
       }
     }
   }
@@ -176,5 +188,23 @@
   transition: all 1s ease;
   &:hover {
     transform: scale(1.1);
+  }
+}
+.projectSection_container__footer__button {
+  margin-bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  gap: 8px;
+  cursor: pointer;
+  @include font_app(16px, 400, var(--secondary_text_color));
+  border: 1px solid var(--secondary_text_color);
+  border-radius: 4px;
+  transition: all 1s ease;
+  &:hover {
+    background: var(--secondary_text_color);
+    color: var(--primary_text_color);
   }
 }

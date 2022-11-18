@@ -34,18 +34,30 @@ export default function List() {
           {projects.map((project: any, index: number) => (
             <tr key={index}>
               <td style={{ fontSize: 20 }}>{project.name}</td>
-              <td className={style.custom_font_small}>{new Date(project?.created_at).toLocaleString()}</td>
+              <td className={style.custom_font_small}>
+                {new Date(project?.created_at).toLocaleString()}
+              </td>
               <td className={style.custom_font_small}>
                 {project.topics?.length > 0
                   ? project?.topics?.map((item: any) => item + ", ")
                   : "___"}
               </td>
               <td className={style.project_links}>
-                <a href={project.html} target="_blank" rel="noreferrer">
+                <a
+                  href={project.html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={style.project_list_links}
+                >
                   <Image src={github} alt="github" width={20} height={20} />
                 </a>
                 {project?.homepage && (
-                  <a href={project.homepage} target="_blank" rel="noreferrer">
+                  <a
+                    href={project.homepage}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={style.project_list_links}
+                  >
                     <Image src={live} alt="live" width={20} height={20} />
                   </a>
                 )}

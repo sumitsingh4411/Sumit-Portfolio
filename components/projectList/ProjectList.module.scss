@@ -45,10 +45,13 @@
     gap: 16px;
     align-items: center;
   }
-  .project_table_header{
+  .project_table_header {
     @include font_app(20px, 600, var(--primary_text_color));
   }
-  .custom_font_small{
+  .custom_font_small {
     @include font_app(16px, 400, var(--secondary_text_color));
   }
+}
+.project_list_links {
+  cursor: pointer;
 }

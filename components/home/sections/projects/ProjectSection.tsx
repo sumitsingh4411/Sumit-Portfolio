@@ -102,7 +102,7 @@ export default function ProjectSection() {
             </h2>
             `
             <p
-              className={`{style.projectSection_container__footer__list} hover_underline_animation`}
+              className={`${style.projectSection_container__footer__list} hover_underline_animation`}
               style={{
                 cursor: "pointer",
                 marginTop: "8px",
@@ -176,9 +176,11 @@ export default function ProjectSection() {
                         style.projectSection_container__body__project__bottom
                       }
                     >
+                      <div className={style.project_teachnology_used}>
                       {project?.topics?.map((topic: any, index: number) => (
                         <p key={index}>{topic}</p>
                       ))}
+                      </div>
                     </div>
                   </div>
                 ))}

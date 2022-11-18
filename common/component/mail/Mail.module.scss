@@ -27,3 +27,12 @@
     background-color: var(--primary_text_color);
   }
 }
+.mail_anchor {
+  color: var(--primary_text_color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 1s ease;
+  &:hover {
+    color: var(--secondary_text_color);
+  }
+}

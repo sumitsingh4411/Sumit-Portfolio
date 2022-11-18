@@ -38,7 +38,18 @@ export default function Experience() {
               <span
                 className={`${style.experienceSection_container__body__right__company_name} hover_underline_animation`}
               >
-                @ {EXPERIENCE_SECTION[active]?.company_name}
+                <a
+                  href={EXPERIENCE_SECTION[active]?.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    color: "inherit",
+                    textDecoration: "inherit",
+                  }}
+                >
+                  {" "}
+                  @ {EXPERIENCE_SECTION[active]?.company_name}
+                </a>
               </span>
             </h1>
             <h2

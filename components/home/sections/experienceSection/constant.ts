@@ -9,6 +9,7 @@ export const EXPERIENCE_SECTION = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
+    url: "https://bytelearn.com/",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const EXPERIENCE_SECTION = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
+    url: "https://bytelearn.com/",
   },
   {
     id: 3,
@@ -31,5 +33,6 @@ export const EXPERIENCE_SECTION = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
+    url: "https://mapup.ai/",
   },
 ];

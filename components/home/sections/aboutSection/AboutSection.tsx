@@ -19,7 +19,12 @@ export default function AboutSection() {
               for building web applications and learning new technologies. I
               have completed my B.Tech in Computer Science and Engineering in
               2021. In my college days, I have worked on many{" "}
-              <a href="" className={"hover_underline_animation"}>
+              <a
+                href="https://github.com/sumitsingh4411"
+                className={"hover_underline_animation"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 projects
               </a>{" "}
               and also participated in many hackathons and competative
@@ -27,17 +32,27 @@ export default function AboutSection() {
             </p>
             <p className={style.aboutSection_description}>
               In my last year of college, I joined a startup named{" "}
-              <a href="" className={"hover_underline_animation"}>
+              <a
+                href="https://mapup.ai/"
+                className={"hover_underline_animation"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Mapup
               </a>{" "}
               as a frontend developer intern for 6 months. After that, I have
               joined a company named{" "}
-              <a href="" className={"hover_underline_animation"}>
+              <a
+                href="https://www.bytelearn.com/"
+                className={"hover_underline_animation"}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {" "}
                 ByteLearn
               </a>{" "}
               as a frontend developer intern. After 3 months of internship, I
-              have joined Sparsh Technologies as a full-time frontend developer.
+              have joined ByteLearn as a full-time frontend developer.
             </p>
             <p className={style.aboutSection_description}>
               I have a great problem solving skills and I am always ready to

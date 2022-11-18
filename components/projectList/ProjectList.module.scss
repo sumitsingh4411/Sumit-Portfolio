@@ -1,5 +1,54 @@
-.projectList{
-    background-color: var(--primary_background_color);
-    height: calc(100vh - 80px);
+@import "../../common/style/style.module.scss";
+
+.projectList {
+  width: 100%;
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+  scroll-behavior: smooth !important;
+  background-color: var(--primary_background_color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .projectList_container {
+    max-width: 1200px;
+    padding: 32px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 16px;
+    .project_list_title {
+      @include font_app(24px, 600);
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--primary_background_color);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary_text_color);
+    border-radius: 4px;
+  }
+}
+
+.project_list_table {
+  th,
+  td {
+    padding: 8px;
+    text-align: start;
+    @include font_app(18px, 500, var(--secondary_text_color));
+    max-width: 400px;
+    flex-wrap: wrap;
+  }
+  .project_links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .project_table_header{
+    @include font_app(20px, 600, var(--primary_text_color));
+  }
+  .custom_font_small{
+    @include font_app(16px, 400, var(--secondary_text_color));
+  }
 }

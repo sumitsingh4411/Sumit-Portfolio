@@ -6,9 +6,16 @@ import github from "../../../../assets/github.svg";
 import live from "../../../../assets/external.svg";
 import folder from "../../../../assets/folder.svg";
 import { useRouter } from "next/router";
+import {
+  githubActions,
+  selectGithubData,
+} from "../../../../redux/slices/githubDataSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function ProjectSection({ data }: any) {
+export default function ProjectSection() {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const { customProjects } = useSelector(selectGithubData);
   const [showMore, setShowMore] = useState(false);
   const showData = () => {
     setShowMore(!showMore);
@@ -16,6 +23,7 @@ export default function ProjectSection({ data }: any) {
   const showAllProjects = () => {
     router.push("/projects");
   };
+  console.log(customProjects);
   return (
     <div id="projects" className={style.projectSection}>
       <div className={style.projectSection_container}>
@@ -105,9 +113,9 @@ export default function ProjectSection({ data }: any) {
             </p>
           </div>
           <div className={style.projectSection_container__footer__links}>
-            {data &&
-              data
-                ?.slice(0, showMore ? data?.length : 6)
+            {customProjects &&
+              customProjects
+                ?.slice(0, showMore ? customProjects?.length : 6)
                 ?.map((project: any, index: number) => (
                   <div
                     className={style.projectSection_container__body__project}
@@ -146,7 +154,9 @@ export default function ProjectSection({ data }: any) {
                             width={22}
                             height={22}
                             className={style.project_link}
-                            onClick={() => window.open(project?.homepage)}
+                            onClick={() =>
+                              window.open(project?.homepage, "_blank")
+                            }
                           />
                         )}
                       </div>

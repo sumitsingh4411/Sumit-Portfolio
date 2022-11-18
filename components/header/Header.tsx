@@ -14,6 +14,7 @@ export default function Header() {
   const logoClick = () => {
     router.push("/");
   };
+  console.log(router);
   return (
     <div className={style.header}>
       <div className={style.header__left}>
@@ -24,7 +25,7 @@ export default function Header() {
       <div className={style.header__right}>
         <div className={style.header__right__item}>
           {SIDEBAR_LINKS.map((item, index) => (
-            <Link href={router?.pathname + item.url} key={index}>
+            <Link href={item.url} key={index}>
               <a
                 className={`${style.header_link} hover_underline_animation`}
                 onClick={() => openPdf(item.url)}

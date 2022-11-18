@@ -4,6 +4,8 @@ import Header from "../components/header/Header";
 import Multimedia from "../common/component/multimedia/Multimedia";
 import Mail from "../common/component/mail/Mail";
 import Footer from "../components/Footer/Footer";
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,8 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Header />
       <Multimedia />
       <Mail />
-      <Component {...pageProps} />
-      
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </div>
   );
 }

@@ -5,7 +5,7 @@
   .skillSection_container {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: auto;
     width: 100%;
     max-width: 1000px;
     .skillSection_container__header {
@@ -20,43 +20,66 @@
       }
     }
     .skillSection_container__body__skill {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
   }
   .skillSection_container__body {
-    margin-top: 120px;
+    margin: 100px 0px;
     display: flex;
     align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 250px;
   }
 }
-.circular_chart {
-  display: block;
-  max-width: 80%;
-  max-height: 156px;
-  .circle_bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 3.2;
-  }
-  .circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    stroke: var(--secondary_text_color);
-    animation: progress 2s ease-out forwards;
-  }
-  @keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
+.skillSection_container__body__left {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  .skillSection_container__body__left__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .skill_item_title {
+      @include font_app(22px, 600);
+    }
+    .skillSection_container__body__left__item__line {
+      height: 40px;
+      width: 100%;
+      background-color: var(--secondary_text_color);
+      border-radius: 4px;
+      .skillSection_container__body__left__item__line__inner {
+        height: 100%;
+        width: 0%;
+        background-color: var(--primary_text_color);
+        border-radius: 4px;
+        //add animation here to animate the width
+        animation: 4s ease-in-out 0s 1 normal none running
+          skillSection;
+        @keyframes skillSection{
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 80%;
+          }
+        }
+      }
     }
   }
-  .text {
-    fill: var(--primary_text_color);
-    @include font_app(5px);
-    text-anchor: middle;
+}
+.skillSection_container__body__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  .skillSection_container__body__right__title {
+    @include font_app(22px, 600);
   }
 }

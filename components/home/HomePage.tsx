@@ -8,7 +8,7 @@ import ProjectSection from "./sections/projects/ProjectSection";
 import Contact from "./sections/contact/Contact";
 import Footer from "../Footer/Footer";
 
-export default function Home() {
+export default function Home({data}:any) {
   return (
     <div className={style.home}>
       <div className={style.home__container}>
@@ -16,7 +16,7 @@ export default function Home() {
         <AboutSection />
         <Experience />
         <SkillSection />
-        <ProjectSection />
+        <ProjectSection data={data}/>
         <Contact />
         <Footer />
       </div>

@@ -15,6 +15,7 @@ export default function Multimedia() {
             width={30}
             height={30}
             className={style.multimedia__container__item}
+            onClick={() => window.open(item?.url, "_blank")}
           />
         ))}
         <div className={style.multimedia__container__straigt_line}></div>

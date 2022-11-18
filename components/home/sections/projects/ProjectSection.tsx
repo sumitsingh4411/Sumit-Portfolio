@@ -5,12 +5,16 @@ import style from "./ProjectSection.module.scss";
 import github from "../../../../assets/github.svg";
 import live from "../../../../assets/external.svg";
 import folder from "../../../../assets/folder.svg";
+import { useRouter } from "next/router";
 
 export default function ProjectSection({ data }: any) {
-  console.log(data);
+  const router = useRouter();
   const [showMore, setShowMore] = useState(false);
   const showData = () => {
     setShowMore(!showMore);
+  };
+  const showAllProjects = () => {
+    router.push("/projects");
   };
   return (
     <div id="projects" className={style.projectSection}>
@@ -79,9 +83,27 @@ export default function ProjectSection({ data }: any) {
           ))}
         </div>
         <div className={style.projectSection_container__footer}>
-          <h2 className={style.projectSection_container__footer__title}>
-            You can like this project also
-          </h2>
+          <div
+            className={style.projectSection_container__footer__}
+            style={{
+              textAlign: "center",
+            }}
+          >
+            <h2 className={style.projectSection_container__footer__title}>
+              You can like this project also
+            </h2>
+            `
+            <p
+              className={`{style.projectSection_container__footer__list} hover_underline_animation`}
+              style={{
+                cursor: "pointer",
+                marginTop: "8px",
+              }}
+              onClick={showAllProjects}
+            >
+              Show all projects in list view
+            </p>
+          </div>
           <div className={style.projectSection_container__footer__links}>
             {data &&
               data

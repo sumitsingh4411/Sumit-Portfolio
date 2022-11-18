@@ -115,13 +115,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  width: 100%;
+  gap: 56px;
   flex-direction: column;
   .projectSection_container__footer__title {
     @include font_app(24px, 600);
   }
+  .projectSection_container__footer__list{
+    text-align: center;
+    margin-top: 8px;
+    cursor: pointer;
+    @include font_app(16px, 400, var(--secondary_text_color));
+  }
   .projectSection_container__footer__links {
     display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
     .projectSection_container__body__project {

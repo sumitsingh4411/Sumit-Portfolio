@@ -216,6 +216,10 @@
 }
 
 @media screen and (max-width:768px){
+  .projectSection_container__body__project {
+    gap: 120px;
+    flex-direction: column;
+  }
   .projectSection_container {
     padding: 0px 16px;
   }
@@ -226,7 +230,7 @@
       top: 0;
       left: 0;
       width: 100% !important;
-      height: 350px;
+      height: 100% !important;
       background: transparentize(#8892b0, 0.6);
       border-radius: 4px;
       z-index: 2;

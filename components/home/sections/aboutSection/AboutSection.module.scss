@@ -98,3 +98,13 @@
     text-decoration: underline;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .aboutSection_container {
+    height: auto !important;
+    padding: 0px 16px;
+    .aboutSection_body {
+      flex-direction: column;
+    }
+  }
+}

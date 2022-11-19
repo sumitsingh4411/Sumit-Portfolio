@@ -37,3 +37,17 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .topSection {
+    .topSection_container {
+      padding: 0px 16px;
+      .topSection_title {
+        @include font_app(32px, 700);
+      }
+      .topSection_subtitle {
+        @include font_app(32px, 700, var(--secondary_text_color));
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.headerMobile {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color: var(--primary_background_color);
+  justify-content: space-between;
+  padding: 0px 12px;
+  .header__left__logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid var(--primary_text_color);
+    cursor: pointer;
+    .header_title {
+      font-size: 36px;
+      font-family: "Racing Sans One", cursive;
+      color: var(--primary_text_color);
+      transition: all 2s ease;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .headerMobile__right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6px;
+    .headerMobile__right__item_1,
+    .headerMobile__right__item_2,
+    .headerMobile__right__item_3 {
+      height: 4px;
+      width: 46px;
+      border-radius: 8px;
+      background-color: var(--primary_text_color);
+      cursor: pointer;
+    }
+    .headerMobile__right__item_2 {
+      width: 36px;
+    }
+    .headerMobile__right__item_3 {
+      width: 26px;
+    }
+  }
+}
+.headerMobile__menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(197, 197, 197, 0.5);
+  z-index: 500;
+  pointer-events: none;
+  user-select: none;
+  .headerMobile__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--primary_background_color);
+    z-index: 600;
+    transition: width 2s ease;
+    .headerMobile__menu__item {
+      height: inherit;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 32px;
+      .header_link {
+        pointer-events: all;
+        user-select: all;
+        font-size: 24px;
+        font-family: "Racing Sans One", cursive;
+        color: var(--primary_text_color);
+        text-decoration: none;
+        transition: all 2s ease;
+      }
+    }
+  }
+}

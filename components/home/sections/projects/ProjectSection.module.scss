@@ -165,6 +165,11 @@
         .project_description {
           @include font_app(14px, 400);
           font-style: italic;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
       .projectSection_container__body__project__bottom {

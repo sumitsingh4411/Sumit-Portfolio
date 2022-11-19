@@ -7,6 +7,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 1050px;
+    margin: 120px 0px;
     .projectSection_container__header {
       display: flex;
       align-items: center;
@@ -20,7 +21,7 @@
     }
   }
   .projectSection_container__body {
-    margin: 80px 0px;
+    margin: 120px 0px;
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -211,5 +212,25 @@
   &:hover {
     background: var(--secondary_text_color);
     color: var(--primary_text_color);
+  }
+}
+
+@media screen and (max-width:768px){
+  .projectSection_container {
+    padding: 0px 16px;
+  }
+  .projectSection_container__body__project__left {
+    position: relative;
+    .projectSection_container_body__image__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 350px;
+      background: transparentize(#8892b0, 0.6);
+      border-radius: 4px;
+      z-index: 2;
+      transition: all 1s ease;
+    }
   }
 }

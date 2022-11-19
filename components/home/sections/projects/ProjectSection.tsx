@@ -7,10 +7,10 @@ import live from "../../../../assets/external.svg";
 import folder from "../../../../assets/folder.svg";
 import { useRouter } from "next/router";
 import {
-  githubActions,
   selectGithubData,
 } from "../../../../redux/slices/githubDataSlice";
 import { useDispatch, useSelector } from "react-redux";
+import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 
 export default function ProjectSection() {
   const router = useRouter();
@@ -23,16 +23,11 @@ export default function ProjectSection() {
   const showAllProjects = () => {
     router.push("/projects");
   };
-  console.log(customProjects);
+
   return (
     <div id="projects" className={style.projectSection}>
       <div className={style.projectSection_container}>
-        <div className={style.projectSection_container__header}>
-          <h1 className={style.projectSection_container__header__title}>
-            Projects
-          </h1>
-          <div className={style.projectSection_container__header__line}></div>
-        </div>
+        <HeaderLine title="Projects" />
         <div className={style.projectSection_container__body}>
           {PROJECTS.map((project, index) => (
             <div
@@ -177,9 +172,9 @@ export default function ProjectSection() {
                       }
                     >
                       <div className={style.project_teachnology_used}>
-                      {project?.topics?.map((topic: any, index: number) => (
-                        <p key={index}>{topic}</p>
-                      ))}
+                        {project?.topics?.map((topic: any, index: number) => (
+                          <p key={index}>{topic}</p>
+                        ))}
                       </div>
                     </div>
                   </div>

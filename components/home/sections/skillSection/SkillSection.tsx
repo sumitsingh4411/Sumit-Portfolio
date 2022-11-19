@@ -3,6 +3,7 @@ import Sphare from "../../../../common/component/sphare/Sphare";
 import { skillSection } from "./constant";
 import style from "./SkillSection.module.scss";
 import css from "styled-jsx/css";
+import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 
 export default function SkillSection() {
   const pulse = css`
@@ -21,12 +22,7 @@ export default function SkillSection() {
   return (
     <div id="skills" className={style.skillSection}>
       <div className={style.skillSection_container}>
-        <div className={style.skillSection_container__header}>
-          <h1 className={style.skillSection_container__header__title}>
-            Skills
-          </h1>
-          <div className={style.skillSection_container__header__line}></div>
-        </div>
+        <HeaderLine title="Skills" />
         <div className={style.skillSection_container__body}>
           <div className={style.skillSection_container__body__left}>
             {skillSection?.map((skill, index) => (

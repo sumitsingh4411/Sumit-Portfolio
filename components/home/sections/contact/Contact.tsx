@@ -3,6 +3,7 @@ import style from "./Contact.module.scss";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
+import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 
 export default function Contact() {
   const formik = useFormik({
@@ -50,12 +51,7 @@ export default function Contact() {
   return (
     <div id="contact" className={style.contactSection}>
       <div className={style.contactSection_container}>
-        <div className={style.contactSection_container__header}>
-          <h1 className={style.contactSection_container__header__title}>
-            Contact
-          </h1>
-          <div className={style.contactSection_container__header__line}></div>
-        </div>
+        <HeaderLine title="Contact" />
         <div className={style.contactSection_container__body}>
           <form
             onSubmit={formik.handleSubmit}

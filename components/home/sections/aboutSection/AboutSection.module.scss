@@ -6,20 +6,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 120vh;
     max-width: 950px;
-    gap: 42px;
-    .aboutSection_header {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      .aboutSection_header__title {
-        @include font_app(36px, 800);
-      }
-      .aboutSection_header__line {
-        @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
-      }
-    }
+    gap: 120px;
+    margin: 120px 0px;
     .aboutSection_body {
       display: flex;
       justify-content: center;

@@ -1,0 +1,25 @@
+@import "../../style/style.module.scss";
+.headerLine {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  .headerLine__title {
+    @include font_app(36px, 800);
+    font-family: "Racing Sans One", cursive;
+    letter-spacing: 2px;
+  }
+  .headerLine__line {
+    @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerLine {
+    .headerLine__title {
+      @include font_app(32px, 700);
+    }
+    .headerLine__line {
+      @include draw_line(150px, 2px, 4px, var(--secondary_text_color));
+    }
+  }
+}

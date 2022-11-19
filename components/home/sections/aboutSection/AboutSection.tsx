@@ -3,15 +3,13 @@ import React from "react";
 import style from "./AboutSection.module.scss";
 import sumit from "../../../../public/sumit.jpg";
 import point_right from "../../../../assets/point_right.svg";
+import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 
 export default function AboutSection() {
   return (
     <div id="about" className={style.aboutSection}>
       <div className={style.aboutSection_container}>
-        <div className={style.aboutSection_header}>
-          <h1 className={style.aboutSection_header__title}>About Me</h1>
-          <div className={style.aboutSection_header__line}></div>
-        </div>
+        <HeaderLine title="About Me" />
         <div className={style.aboutSection_body}>
           <div className={style.aboutSection_body_left}>
             <p className={style.aboutSection_description}>

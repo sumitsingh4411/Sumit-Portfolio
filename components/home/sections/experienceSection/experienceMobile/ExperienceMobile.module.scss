@@ -1,0 +1,61 @@
+@import "../../../../../common/style/style.module.scss";
+
+.experienceSection {
+  @include flex_center(column, 100%, 100%);
+  .experienceSection_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    margin: 200px 0px;
+    .experienceSection_container__body {
+      margin-top: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      .experienceSection_container__body__left {
+        .custom_link_btn {
+          cursor: pointer;
+          padding: 16px 48px;
+          @include font_app(16px, 400, var(--secondary_text_color));
+          transition: all 0.8s ease;
+          border-left: 2px solid var(--secondary_text_color);
+          &:hover {
+            background-color: var(--secondary_background_color);
+            color: var(--primary_text_color);
+          }
+        }
+        .custom_link_btn_active {
+          background-color: var(--secondary_background_color);
+          border-left: 2px solid var(--primary_text_color);
+          color: var(--primary_text_color);
+        }
+      }
+      .experienceSection_container__body__right__title {
+        @include font_app(36px, 800, var(--secondary_text_color));
+        .experienceSection_container__body__right__company_name {
+          @include font_app(36px, 800, var(--primary_text_color));
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .experienceSection_container__body__right__duration {
+        @include font_app(16px, 400, var(--secondary_text_color));
+        font-style: italic;
+        margin-bottom: 22px;
+      }
+      .experienceSection_container__body__right__feature {
+        @include font_app(18px, 400, var(--secondary_text_color));
+        margin-bottom: 22px;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+.custom_hand {
+  color: var(--primary_text_color);
+  font-size: 24px;
+  margin-right: 8px;
+}

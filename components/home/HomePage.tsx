@@ -7,17 +7,21 @@ import SkillSection from "./sections/skillSection/SkillSection";
 import ProjectSection from "./sections/projects/ProjectSection";
 import Contact from "./sections/contact/Contact";
 import Footer from "../Footer/Footer";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export default function Home() {
   return (
     <div className={style.home}>
       <div className={style.home__container}>
-        <TopSection />
-        <AboutSection />
-        <Experience />
-        <SkillSection />
-        <ProjectSection />
-        <Contact />
+        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+          <TopSection />
+          <AboutSection />
+          <Experience />
+          <SkillSection />
+          <ProjectSection />
+          <Contact />
+        </AnimationOnScroll>
         <Footer />
       </div>
     </div>

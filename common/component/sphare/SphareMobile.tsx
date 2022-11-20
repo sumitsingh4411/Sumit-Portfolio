@@ -53,8 +53,8 @@ const createInitialState = (size: number) => {
 };
 
 const { radius, maxSpeed, initSpeed, direction } = {
-  radius:  300 as number,
-  maxSpeed: 20 as number,
+  radius: 250 as number,
+  maxSpeed: 12 as number,
   initSpeed: 40 as number,
   direction: 135 as number,
 };
@@ -62,7 +62,7 @@ const { radius, maxSpeed, initSpeed, direction } = {
 const size = 1.5 * radius;
 const depth = 2 * radius;
 
-function Sphare() {
+function SphareMobile() {
   const tagCloudRef = useRef<HTMLDivElement | null>(null);
   const [items, setItems] = useState<ItemProps[]>(createInitialState(size));
 
@@ -170,4 +170,4 @@ function Sphare() {
   );
 }
 
-export default memo(Sphare);
+export default memo(SphareMobile);

@@ -3,11 +3,11 @@ import type { AppProps } from "next/app";
 import Header from "../components/header/Header";
 import Multimedia from "../common/component/multimedia/Multimedia";
 import Mail from "../common/component/mail/Mail";
-import Footer from "../components/Footer/Footer";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import useWindowWidth from "../common/useWindowWidth";
 import HeaderMobile from "../components/header/mobile/HeaderMobile";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const windowWidth = useWindowWidth();
@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Component {...pageProps} />
       </Provider>
+      <Analytics />
     </div>
   );
 }

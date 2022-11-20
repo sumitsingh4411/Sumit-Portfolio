@@ -120,13 +120,15 @@
   gap: 56px;
   flex-direction: column;
   .projectSection_container__footer__title {
-    @include font_app(24px, 600);
+    @include font_app(32px, 600);
+    font-style: italic;
   }
   .projectSection_container__footer__list {
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
     cursor: pointer;
-    @include font_app(16px, 400, var(--secondary_text_color));
+    @include font_app(24px, 500, var(--secondary_text_color));
+    font-family: "Racing Sans One", cursive;
   }
   .projectSection_container__footer__links {
     display: flex;
@@ -186,6 +188,10 @@
           gap: 4px;
         }
       }
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 }
@@ -204,8 +210,9 @@
   width: 300px;
   height: 50px;
   gap: 8px;
+  background: none;
   cursor: pointer;
-  @include font_app(16px, 400, var(--secondary_text_color));
+  @include font_app(16px, 400);
   border: 1px solid var(--secondary_text_color);
   border-radius: 4px;
   transition: all 1s ease;
@@ -215,7 +222,7 @@
   }
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
   .projectSection_container__body__project {
     gap: 120px;
     flex-direction: column;

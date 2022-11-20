@@ -93,7 +93,7 @@ export default function ProjectSection() {
             }}
           >
             <h2 className={style.projectSection_container__footer__title}>
-              You can like this project also
+              You can like these project also !
             </h2>
             `
             <p

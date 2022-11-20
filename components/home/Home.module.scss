@@ -4,6 +4,7 @@
   height: calc(100vh - 90px);
   overflow-y: scroll;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
   .home__container {
     display: flex;
     flex-direction: column;

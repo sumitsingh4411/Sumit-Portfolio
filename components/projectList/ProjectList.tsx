@@ -1,15 +1,17 @@
 import React from "react";
 import Mail from "../../common/component/mail/Mail";
 import Multimedia from "../../common/component/multimedia/Multimedia";
+import useWindowWidth from "../../common/useWindowWidth";
 import List from "./List";
 import style from "./ProjectList.module.scss";
 
-export default function ProjectList({ data }: any) {
+export default function ProjectList() {
+  const windowWidth = useWindowWidth();
   return (
     <div className={style.projectList}>
-      <Multimedia />
+      {windowWidth > 768 && <Multimedia />}
       <List />
-      <Mail />
+      {windowWidth > 768 && <Mail />}
     </div>
   );
 }

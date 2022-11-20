@@ -55,3 +55,12 @@
 .project_list_links {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .project_list_table {
+    th,
+    td {
+      max-width: 200px;
+    }
+  }
+}

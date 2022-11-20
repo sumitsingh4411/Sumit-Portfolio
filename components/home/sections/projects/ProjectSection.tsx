@@ -131,7 +131,7 @@ export default function ProjectSection() {
 
                       <div
                         className={
-                          style.projectSection_container__body__project__right
+                          style.projectSection_container__body__project__right_bottom
                         }
                       >
                         <Image

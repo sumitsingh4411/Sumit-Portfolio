@@ -8,8 +8,10 @@ import {
 import style from "./ProjectList.module.scss";
 import github from "../../assets/github.svg";
 import live from "../../assets/external.svg";
+import useWindowWidth from "../../common/useWindowWidth";
 
 export default function List() {
+  const windowWidth = useWindowWidth();
   const dispatch = useDispatch();
   const { projects } = useSelector(selectGithubData);
   useEffect(() => {
@@ -25,8 +27,12 @@ export default function List() {
         <thead>
           <tr>
             <th className={style.project_table_header}>Title</th>
-            <th className={style.project_table_header}>Created at</th>
-            <th className={style.project_table_header}>Teachnoloy</th>
+            {windowWidth > 768 && (
+              <th className={style.project_table_header}>Created at</th>
+            )}
+            {windowWidth > 768 && (
+              <th className={style.project_table_header}>Teachnoloy</th>
+            )}
             <th className={style.project_table_header}>Link</th>
           </tr>
         </thead>
@@ -34,14 +40,18 @@ export default function List() {
           {projects.map((project: any, index: number) => (
             <tr key={index}>
               <td style={{ fontSize: 20 }}>{project.name}</td>
-              <td className={style.custom_font_small}>
-                {new Date(project?.created_at).toLocaleString()}
-              </td>
-              <td className={style.custom_font_small}>
-                {project.topics?.length > 0
-                  ? project?.topics?.map((item: any) => item + ", ")
-                  : "___"}
-              </td>
+              {windowWidth > 768 && (
+                <td className={style.custom_font_small}>
+                  {new Date(project?.created_at).toLocaleString()}
+                </td>
+              )}
+              {windowWidth > 768 && (
+                <td className={style.custom_font_small}>
+                  {project.topics?.length > 0
+                    ? project?.topics?.map((item: any) => item + ", ")
+                    : "___"}
+                </td>
+              )}
               <td className={style.project_links}>
                 <a
                   href={project.html_url}

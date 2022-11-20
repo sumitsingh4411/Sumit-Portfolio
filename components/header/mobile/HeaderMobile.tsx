@@ -20,6 +20,7 @@ export default function HeaderMobile() {
     if (url.trim().length === 0) {
       window.open("../sumit_cv.pdf", "_blank");
     }
+    setShowMenu(false);
   };
   return (
     <>

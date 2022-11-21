@@ -3,8 +3,9 @@ import Sphare from "../../../../common/component/sphare/Sphare";
 import { skillSection } from "./constant";
 import style from "./SkillSection.module.scss";
 import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
-import useWindowWidth from "../../../../common/useWindowWidth";
 import SphareMobile from "../../../../common/component/sphare/SphareMobile";
+import useWindowWidth from "../../../../common/hooks/useWindowWidth";
+import { DEVICE_TYPE } from "../../../../common/constant";
 
 export default function SkillSection() {
   const windowWidth = useWindowWidth();
@@ -39,7 +40,7 @@ export default function SkillSection() {
             ))}
           </div>
           <div className={style.skillSection_container__body__right}>
-            {windowWidth > 768 ? <Sphare /> : <SphareMobile />}
+            {windowWidth > DEVICE_TYPE.MOBILE ? <Sphare /> : <SphareMobile />}
           </div>
         </div>
       </div>

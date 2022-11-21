@@ -68,3 +68,31 @@ ol {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.fade_left {
+  animation: show_element_left 2s ease-in-out;
+}
+@keyframes show_element_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fade_right {
+  animation: show_element_right 2s ease-in-out;
+}
+@keyframes show_element_right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

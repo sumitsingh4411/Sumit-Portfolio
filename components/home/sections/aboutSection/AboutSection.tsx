@@ -1,9 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import style from "./AboutSection.module.scss";
 import sumit from "../../../../public/sumit.jpg";
 import point_right from "../../../../assets/point_right.svg";
 import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
+import useOnScreen from "../../../../common/hooks/useOnScreen";
 
 export default function AboutSection() {
   return (
@@ -11,7 +12,11 @@ export default function AboutSection() {
       <div className={style.aboutSection_container}>
         <HeaderLine title="About Me" />
         <div className={style.aboutSection_body}>
-          <div className={style.aboutSection_body_left}>
+          <div
+            className={`${style.aboutSection_body_left} 
+              fade_left
+             `}
+          >
             <p className={style.aboutSection_description}>
               I am a frontend developer specializing in React. I have a passion
               for building web applications and learning new technologies. I
@@ -86,7 +91,10 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className={style.aboutSection_body__container}>
+          <div
+            className={`${style.aboutSection_body__container}  fade_right
+            `}
+          >
             <Image
               src={sumit}
               alt="sumit"

@@ -7,8 +7,9 @@ import SkillSection from "./sections/skillSection/SkillSection";
 import ProjectSection from "./sections/projects/ProjectSection";
 import Contact from "./sections/contact/Contact";
 import Footer from "../Footer/Footer";
-import useWindowWidth from "../../common/useWindowWidth";
 import ExperienceMobile from "./sections/experienceSection/experienceMobile/ExperienceMobile";
+import useWindowWidth from "../../common/hooks/useWindowWidth";
+import { DEVICE_TYPE } from "../../common/constant";
 
 export default function Home() {
   const windowWidth = useWindowWidth();
@@ -17,7 +18,11 @@ export default function Home() {
       <div className={style.home__container}>
         <TopSection />
         <AboutSection />
-        {windowWidth > 768 ? <Experience /> : <ExperienceMobile />}
+        {windowWidth > DEVICE_TYPE.MOBILE ? (
+          <Experience />
+        ) : (
+          <ExperienceMobile />
+        )}
         <SkillSection />
         <ProjectSection />
         <Contact />

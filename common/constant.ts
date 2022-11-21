@@ -100,3 +100,9 @@ export const SKILLS_LIST: string[] = [
   "Bootstrap",
   "Three.js",
 ];
+
+export const enum DEVICE_TYPE {
+  MOBILE = 768,
+  TABLET = 1024,
+  LAPTOP = 1440,
+}

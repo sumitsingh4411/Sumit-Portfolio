@@ -8,7 +8,8 @@ import {
 import style from "./ProjectList.module.scss";
 import github from "../../assets/github.svg";
 import live from "../../assets/external.svg";
-import useWindowWidth from "../../common/useWindowWidth";
+import useWindowWidth from "../../common/hooks/useWindowWidth";
+import { DEVICE_TYPE } from "../../common/constant";
 
 export default function List() {
   const windowWidth = useWindowWidth();
@@ -27,10 +28,10 @@ export default function List() {
         <thead>
           <tr>
             <th className={style.project_table_header}>Title</th>
-            {windowWidth > 768 && (
+            {windowWidth > DEVICE_TYPE.MOBILE && (
               <th className={style.project_table_header}>Created at</th>
             )}
-            {windowWidth > 768 && (
+            {windowWidth > DEVICE_TYPE.MOBILE && (
               <th className={style.project_table_header}>Teachnoloy</th>
             )}
             <th className={style.project_table_header}>Link</th>
@@ -40,12 +41,12 @@ export default function List() {
           {projects.map((project: any, index: number) => (
             <tr key={index}>
               <td style={{ fontSize: 20 }}>{project.name}</td>
-              {windowWidth > 768 && (
+              {windowWidth > DEVICE_TYPE.MOBILE && (
                 <td className={style.custom_font_small}>
                   {new Date(project?.created_at).toLocaleString()}
                 </td>
               )}
-              {windowWidth > 768 && (
+              {windowWidth > DEVICE_TYPE.MOBILE && (
                 <td className={style.custom_font_small}>
                   {project.topics?.length > 0
                     ? project?.topics?.map((item: any) => item + ", ")

@@ -4,6 +4,11 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
+import phone from "../../../../assets/phone.svg";
+import email from "../../../../assets/mail.svg";
+import location from "../../../../assets/place.svg";
+import Image from "next/image";
+import { MULTIMEDIA } from "../../../header/constant";
 
 export default function Contact() {
   const formik = useFormik({
@@ -52,63 +57,101 @@ export default function Contact() {
     <div id="contact" className={style.contactSection}>
       <div className={style.contactSection_container}>
         <HeaderLine title="Contact" />
+        <p className={style.contactSection_title}>
+          {" "}
+          Feel free to contact me for any work or suggestions !
+        </p>
         <div className={style.contactSection_container__body}>
-          <form
-            onSubmit={formik.handleSubmit}
-            className={style.contactSection_container__body__form_list}
-          >
-            <div
-              className={style.contactSection_container__body__form_list_item}
-            >
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                onChange={formik.handleChange}
-                value={formik.values.name}
-              />
-              {formik.touched.name && formik.errors.name ? (
-                <div className={style.error}>{formik.errors.name}</div>
-              ) : null}
+          <div className={style.contactSection_container__body__left}>
+            <h1 className={style.left_side_title}>Contact information</h1>
+            <p className={style.left_side_subtitle}>
+              I will be happy to answer your questions
+            </p>
+
+            <div className={style.left_side_item}>
+              <Image src={phone} alt="phone" width={24} height={24} />
+              <p> +91 6371913458</p>
             </div>
-            <div
-              className={style.contactSection_container__body__form_list_item}
-            >
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-              />
-              {formik.touched.email && formik.errors.email ? (
-                <div className={style.error}>{formik.errors.email}</div>
-              ) : null}
+            <div className={style.left_side_item}>
+              <Image src={email} alt="email" width={30} height={30} />
+              <p>sumitsingh841208@gmail.com</p>
             </div>
-            <div
-              className={style.contactSection_container__body__form_list_item}
-            >
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                rows={5}
-                name="message"
-                onChange={formik.handleChange}
-                value={formik.values.message}
-              />
-              {formik.touched.message && formik.errors.message ? (
-                <div className={style.error}>{formik.errors.message}</div>
-              ) : null}
+            <div className={style.left_side_item}>
+              <Image src={location} alt="location" width={30} height={30} />
+              <p>India</p>
             </div>
-            <button
-              type="submit"
-              className={style.contactSection_container__body__form_list_btn}
+            <div className={style.left_side_item_list}>
+            <div className={style.left_side_media_icons}>
+              {MULTIMEDIA.map((item) => (
+                <Image
+                  key={item.id}
+                  src={item.icon}
+                  alt={item.name}
+                  width={30}
+                  height={30}
+                />
+              ))}
+            </div>
+            </div>
+          </div>
+          <div className={style.contactSection_container__body__right}>
+            <form
+              onSubmit={formik.handleSubmit}
+              className={style.contactSection_container__body__form_list}
             >
-              {"Say something to Sumit"?.toUpperCase()}
-            </button>
-          </form>
+              <div
+                className={style.contactSection_container__body__form_list_item}
+              >
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={formik.handleChange}
+                  value={formik.values.name}
+                />
+                {formik.touched.name && formik.errors.name ? (
+                  <div className={style.error}>{formik.errors.name}</div>
+                ) : null}
+              </div>
+              <div
+                className={style.contactSection_container__body__form_list_item}
+              >
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={formik.handleChange}
+                  value={formik.values.email}
+                />
+                {formik.touched.email && formik.errors.email ? (
+                  <div className={style.error}>{formik.errors.email}</div>
+                ) : null}
+              </div>
+              <div
+                className={style.contactSection_container__body__form_list_item}
+              >
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  name="message"
+                  onChange={formik.handleChange}
+                  value={formik.values.message}
+                />
+                {formik.touched.message && formik.errors.message ? (
+                  <div className={style.error}>{formik.errors.message}</div>
+                ) : null}
+              </div>
+              <button
+                type="submit"
+                className={style.contactSection_container__body__form_list_btn}
+              >
+                {"Say something to Sumit"?.toUpperCase()}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

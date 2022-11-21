@@ -7,30 +7,72 @@
     flex-direction: column;
     width: 100%;
     margin: 120px 0px;
-    max-width: 1000px;
-    .contactSection_container__header {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      .contactSection_container__header__title {
-        @include font_app(36px, 800);
-      }
-      .contactSection_container__header__line {
-        @include draw_line(300px, 2px, 4px, var(--secondary_text_color));
-      }
-    }
+    max-width: 1100px;
     .contactSection_container__body {
       margin: 120px 0;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 120px;
+      width: 100%;
+      background-color: var(--special_color);
+      padding: 32px;
+      border-radius: 8px;
+      .contactSection_container__body__left {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .left_side_title {
+          font-size: 32px;
+          font-weight: 600;
+          color: var(--primary_text_color);
+        }
+        .left_side_subtitle {
+          font-size: 18px;
+          font-weight: 400;
+          color: var(--secondary_text_color);
+          font-style: italic;
+          margin-top: 4px;
+          margin-bottom: 62px;
+        }
+        .left_side_item {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 24px;
+          color: var(--primary_text_color);
+        }
+        .left_side_item_list {
+          height: 180px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .left_side_media_icons {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            gap: 32px;
+          }
+        }
+      }
+      .contactSection_container__body__right {
+        flex: 1;
+        width: 100%;
+      }
       .contactSection_container__body__form_list {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 32px;
+        gap: 42px;
         .contactSection_container__body__form_list_item {
           display: flex;
           flex-direction: column;
-          gap: 5px;
+          gap: 6px;
           width: 480px;
           label {
             @include font_app(16px, 600, var(--secondary_text_color));
@@ -74,10 +116,24 @@
   .contactSection_container {
     padding: 0px 16px;
   }
+  .contactSection_container__body {
+    flex-direction: column !important;
+    padding: 32px 16px !important;
+    .contactSection_container__body__left {
+      border-bottom: 2px solid var(--primary_text_color) !important;
+      padding-bottom: 16px;
+    }
+  }
   .contactSection_container__body__form_list_item {
     width: 100% !important;
   }
   .contactSection_container__body__form_list_btn {
     width: 100% !important;
   }
+}
+
+.contactSection_title {
+  @include font_app(20px, 800, var(--secondary_text_color));
+  text-align: center;
+  margin-top: 120px;
 }

@@ -1,7 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-![Screenshot Capture - 2022-11-06 - 09-24-10](https://user-images.githubusercontent.com/76992713/200154557-a40b8514-feed-4395-8d5b-7832ab2c5855.png)
+![Screenshot Capture - 2022-11-21 - 18-16-39](https://user-images.githubusercontent.com/76992713/203209000-63c952da-abc8-4df8-804e-e66bbf1e73bd.png)
+![Screenshot Capture - 2022-11-21 - 18-17-13](https://user-images.githubusercontent.com/76992713/203209022-6d3a3115-319f-49ef-a82a-e31692b94706.png)
+![Screenshot Capture - 2022-11-21 - 18-17-40](https://user-images.githubusercontent.com/76992713/203209063-b49571f9-23c6-428e-854d-d3a86d68c2d5.png)
+![Screenshot Capture - 2022-11-21 - 18-17-57](https://user-images.githubusercontent.com/76992713/203209089-68595161-92b0-4f1c-bc8f-dbb1e989a68f.png)
+![Screenshot Capture - 2022-11-21 - 18-18-15](https://user-images.githubusercontent.com/76992713/203209094-ffae03ae-1cf1-4f6c-b056-0f6ff1f2a745.png)
+![Screenshot Capture - 2022-11-22 - 08-17-12](https://user-images.githubusercontent.com/76992713/203209116-b04bb914-bf7c-4a32-b434-8cfbdb76c998.png)
+
 
 
 

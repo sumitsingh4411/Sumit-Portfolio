@@ -94,6 +94,7 @@
           @include flex_center("row", 232px, 56px);
           gap: 12px;
           width: 100%;
+          cursor: pointer;
           background: none;
           border-radius: 4px;
           border: 1px solid var(--primary_text_color);

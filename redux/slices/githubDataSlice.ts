@@ -19,7 +19,19 @@ const githubRepoData = createAsyncThunk(
       const response = await fetch(
         "https://api.github.com/users/sumitsingh4411/repos?sort=created&per_page=100"
       );
-      const data = await response.json();
+      let data = await response.json();
+      data = data.map((repo: any) => ({
+        created_at: repo?.created_at,
+        homepage: repo?.homepage,
+        html_url: repo?.html_url,
+        id: repo?.id,
+        topics: repo?.topics,
+        name: repo?.name,
+        description: repo?.description,
+        language: repo?.language,
+        updated_at: repo?.updated_at,
+        url: repo?.url,
+      }));
       dispatch(githubActions.setCustomProjectList(data));
       return data;
     } catch (error) {

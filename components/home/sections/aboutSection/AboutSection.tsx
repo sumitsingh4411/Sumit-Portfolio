@@ -8,7 +8,7 @@ import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 export default function AboutSection() {
   return (
     <div id="about" className={style.aboutSection}>
-      <div className={`${style.aboutSection_container} fade_in_animation`}>
+      <div className={`${style.aboutSection_container}`}>
         <HeaderLine title="About Me" />
         <div className={style.aboutSection_body}>
           <div

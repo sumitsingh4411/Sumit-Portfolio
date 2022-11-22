@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 ![Screenshot Capture - 2022-11-21 - 18-16-39](https://user-images.githubusercontent.com/76992713/203209000-63c952da-abc8-4df8-804e-e66bbf1e73bd.png)
 ![Screenshot Capture - 2022-11-21 - 18-17-13](https://user-images.githubusercontent.com/76992713/203209022-6d3a3115-319f-49ef-a82a-e31692b94706.png)
 ![Screenshot Capture - 2022-11-21 - 18-17-40](https://user-images.githubusercontent.com/76992713/203209063-b49571f9-23c6-428e-854d-d3a86d68c2d5.png)
@@ -10,7 +8,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Getting Started
 First, run the development server:
 
 ```bash

@@ -6,10 +6,12 @@ import github from "../../../../assets/github.svg";
 export default function TopSection() {
   return (
     <div className={style.topSection}>
-      <div className={style.topSection_container}>
+      <div className={`${style.topSection_container} fade_in_animation`}>
         <p className={style.topSection_top_title}>Hi, my name is</p>
-        <h1 className={style.topSection_title}>Sumit Kumar Singh.</h1>
-        <h2 className={style.topSection_subtitle}>
+        <h1 className={`${style.topSection_title}`}>
+          Sumit Kumar Singh.
+        </h1>
+        <h2 className={`${style.topSection_subtitle}`}>
           I am working as a front-end developer.
         </h2>
         <p className={style.topSection_description}>

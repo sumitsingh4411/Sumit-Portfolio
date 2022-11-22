@@ -81,17 +81,21 @@ export default function Contact() {
               <p>India</p>
             </div>
             <div className={style.left_side_item_list}>
-            <div className={style.left_side_media_icons}>
-              {MULTIMEDIA.map((item) => (
-                <Image
-                  key={item.id}
-                  src={item.icon}
-                  alt={item.name}
-                  width={30}
-                  height={30}
-                />
-              ))}
-            </div>
+              <div className={style.left_side_media_icons}>
+                {MULTIMEDIA.map((item) => (
+                  <Image
+                    key={item.id}
+                    src={item.icon}
+                    alt={item.name}
+                    width={30}
+                    height={30}
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    onClick={() => window.open(item.url, "_blank")}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <div className={style.contactSection_container__body__right}>

@@ -1,15 +1,14 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 import style from "./AboutSection.module.scss";
 import sumit from "../../../../public/sumit.jpg";
 import point_right from "../../../../assets/point_right.svg";
 import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
-import useOnScreen from "../../../../common/hooks/useOnScreen";
 
 export default function AboutSection() {
   return (
     <div id="about" className={style.aboutSection}>
-      <div className={style.aboutSection_container}>
+      <div className={`${style.aboutSection_container} fade_in_animation`}>
         <HeaderLine title="About Me" />
         <div className={style.aboutSection_body}>
           <div

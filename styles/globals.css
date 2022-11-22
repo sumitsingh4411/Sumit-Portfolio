@@ -96,3 +96,17 @@ ol {
     transform: translateY(0px);
   }
 }
+
+.fade_in_animation {
+  animation: show_element 1s ease-in-out;
+}
+@keyframes show_element {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

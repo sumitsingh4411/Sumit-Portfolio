@@ -27,7 +27,7 @@ export default function Header() {
             SIDEBAR_LINKS.map((item, index) => (
               <Link href={item.url} key={index}>
                 <a
-                  className={`${style.header_link} hover_underline_animation`}
+                  className={`${style.header_link} hover_underline_animation fade_in_animation`}
                   onClick={() => openPdf(item.url)}
                 >
                   {item.name}

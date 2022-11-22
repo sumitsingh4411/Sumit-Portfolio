@@ -83,5 +83,18 @@
         transition: all 2s ease;
       }
     }
+    animation: fade_left 1s ease-out;
+    @keyframes fade_left {
+      0% {
+        width: 0%;
+        transform: translateX(100%);
+        filter: blur(5px);
+      }
+      100% {
+        width: 80%;
+        transform: translateX(0%);
+        filter: blur(0px);
+      }
+    }
   }
 }

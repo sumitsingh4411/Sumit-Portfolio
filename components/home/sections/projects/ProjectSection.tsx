@@ -9,12 +9,11 @@ import { useRouter } from "next/router";
 import {
   selectGithubData,
 } from "../../../../redux/slices/githubDataSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import HeaderLine from "../../../../common/component/headerLine/HeaderLine";
 
 export default function ProjectSection() {
   const router = useRouter();
-  const dispatch = useDispatch();
   const { customProjects } = useSelector(selectGithubData);
   const [showMore, setShowMore] = useState(false);
   const showData = () => {

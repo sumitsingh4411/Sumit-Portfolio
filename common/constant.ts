@@ -106,3 +106,19 @@ export const enum DEVICE_TYPE {
   TABLET = 1024,
   LAPTOP = 1440,
 }
+
+export const GITHUB_URL =
+  "https://api.github.com/users/sumitsingh4411/repos?sort=created&per_page=100";
+
+export const GITHUB_REPO_URL =
+  "https://github.com/sumitsingh4411?tab=repositories";
+
+export const CONSTANT_URL = {
+  GITHUB: "https://github.com/sumitsingh4411",
+  MAPUP: "https://mapup.ai/",
+  BYTELEARN: "https://www.bytelearn.com/",
+  LINKEDIN: "https://www.linkedin.com/in/sumit-singh-81a73817a/",
+};
+
+export const ABOUT_SKILLS_1 = ["React", "Next.js", "TypeScript", "Redux"];
+export const ABOUT_SKILLS_2 = ["JavaScript", "HTML", "CSS", "Sass"];

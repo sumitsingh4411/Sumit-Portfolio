@@ -9,6 +9,7 @@ import email from "../../../../assets/mail.svg";
 import location from "../../../../assets/place.svg";
 import Image from "next/image";
 import { MULTIMEDIA } from "../../../header/constant";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const formik = useFormik({
@@ -33,12 +34,11 @@ export default function Contact() {
         )
         .then(
           function (response) {
-            console.log("SUCCESS!", response.status, response.text);
+            toast.success("Message sent successfully!");
             formik.resetForm();
           },
           function (error) {
-            console.log("FAILED...", error);
-            formik.resetForm();
+            toast.error("Something went wrong! Please try again later.");
           }
         );
     },

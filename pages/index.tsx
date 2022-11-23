@@ -2,26 +2,17 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { GITHUB_URL } from "../common/constant";
+import { getParticulatInfo } from "../common/helper";
 import HomePage from "../components/home/HomePage";
 import { githubActions } from "../redux/slices/githubDataSlice";
 
+//ssr
 export const getServerSideProps = async () => {
-  const response = await fetch(
-    "https://api.github.com/users/sumitsingh4411/repos?sort=created&per_page=100"
-  );
+  // get data from github
+  const response = await fetch(GITHUB_URL);
   let data = await response.json();
-  data = data.map((repo: any) => ({
-    created_at: repo?.created_at,
-    homepage: repo?.homepage,
-    html_url: repo?.html_url,
-    id: repo?.id,
-    topics: repo?.topics,
-    name: repo?.name,
-    description: repo?.description,
-    language: repo?.language,
-    updated_at: repo?.updated_at,
-    url: repo?.url,
-  }));
+  data = getParticulatInfo(data);
   return {
     props: { data },
   };

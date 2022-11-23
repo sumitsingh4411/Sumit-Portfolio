@@ -9,6 +9,7 @@ import HeaderMobile from "../components/header/mobile/HeaderMobile";
 import { Analytics } from "@vercel/analytics/react";
 import useWindowWidth from "../common/hooks/useWindowWidth";
 import { DEVICE_TYPE } from "../common/constant";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const windowWidth = useWindowWidth();
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Provider>
       <Analytics />
+      <Toaster position="bottom-right" />
     </div>
   );
 }

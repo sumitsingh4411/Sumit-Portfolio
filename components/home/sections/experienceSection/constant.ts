@@ -18,9 +18,10 @@ export const EXPERIENCE_SECTION = [
     designation: "Frontend Developer Intern",
     duration: "Sept 2021 - Nov 2021",
     description: [
-     "Worked on multiple custom components for the application. like: Pagination, Search, etc.",
-     "Worked on Authentication and Authorization for the application.",
-     
+      "Worked on multiple custom components for the application. like: Pagination, Search, etc.",
+      "Worked on Authentication and Authorization for the application.",
+      "Worked on different types of screens size for different devices.",
+      "Worked on third party libraries like: yup, formik, react-google-login, etc.",
     ],
     url: "https://bytelearn.com/",
   },
@@ -30,9 +31,9 @@ export const EXPERIENCE_SECTION = [
     designation: "Frontend Developer Intern",
     duration: "Feb 2021 - July 2021",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Worked on Reactjs, Redux, React Naitve application for finding total tolls and fuel cost calculation.",
+      "Worked with engineering team on design React native app for choosing better road for travelling on the basis of time and cost.",
+      "Worked on multiple third party library available in React like,Axios, Material Ui, etc.",
     ],
     url: "https://mapup.ai/",
   },

@@ -4,6 +4,7 @@ const configure = {
     domains: [
       "camo.githubusercontent.com",
       "user-images.githubusercontent.com",
+      "cdn.buymeacoffee.com",
     ],
   },
 };

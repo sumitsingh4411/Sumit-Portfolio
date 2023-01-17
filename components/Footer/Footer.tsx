@@ -15,21 +15,6 @@ export default function Footer() {
             </p>{" "}
             <p>by @Sumit Kumar Singh</p>
           </div>
-          <div className={style.footer_container_text_social_right}>
-            <img
-              onClick={() => {
-                window.open(
-                  "https://www.buymeacoffee.com/sumitsinghJ",
-                  "_blank"
-                );
-              }}
-              src={"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"}
-              alt="Buy Me A Coffee"
-              width={217}
-              height={48}
-              style={{ cursor: "pointer" }}
-            />
-          </div>
         </div>
       </div>
     </div>

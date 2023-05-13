@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./Home.module.scss";
 import TopSection from "./sections/topSection/TopSection";
 import AboutSection from "./sections/aboutSection/AboutSection";
@@ -13,6 +13,21 @@ import { DEVICE_TYPE } from "../../common/constant";
 
 export default function Home() {
   const windowWidth = useWindowWidth();
+  useEffect(() => {
+    (() => {
+      if (typeof window !== "undefined") {
+        (window as any).hj("identify",'sks', {
+          'name': "Sumit Kumar Singh",
+          'email': "sumit@gmail.com",
+          'address': "Bangalore",
+          'phone': "1234567890",
+          'company': "Google",
+          'role': "Software Engineer",
+          'experience': "5 years",
+        });
+      }
+    })();
+  }, []);
   return (
     <div className={style.home}>
       <div className={style.home__container}>
